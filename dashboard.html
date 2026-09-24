@@ -8,8 +8,8 @@
   
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/responsive.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2.5">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=2.5">
 </head>
 <body>
 
@@ -118,8 +118,8 @@
           <!-- Welcome Header -->
           <div class="dash-page-header">
             <div>
-              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">Welcome back, Alex</h1>
-              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Here is your upcoming show itinerary, digital tickets, and VIP membership status.</p>
+              <h1>Welcome back, Alex</h1>
+              <p>Here is your upcoming show itinerary, digital tickets, and VIP membership status.</p>
             </div>
             <a href="shows.html" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Reserve More Tickets</a>
           </div>
@@ -226,8 +226,8 @@
         <section class="dash-tab-content" id="ticketsSection" data-tab="tickets">
           <div class="dash-page-header">
             <div>
-              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">My E-Tickets &amp; Passes</h1>
-              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Access scannable digital passes, booth assignments, and mobile wallet passes.</p>
+              <h1>My E-Tickets &amp; Passes</h1>
+              <p>Access scannable digital passes, booth assignments, and mobile wallet passes.</p>
             </div>
             <a href="tickets.html" class="btn btn-primary btn-sm"><i class="fas fa-ticket"></i> Buy More Tickets</a>
           </div>
@@ -375,8 +375,8 @@
         <section class="dash-tab-content" id="reservationsSection" data-tab="reservations">
           <div class="dash-page-header">
             <div>
-              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">VIP Lounge &amp; Booth Reservations</h1>
-              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Exclusive table privileges, dedicated host concierge, and bottle service perks.</p>
+              <h1>VIP Lounge &amp; Booth Reservations</h1>
+              <p>Exclusive table privileges, dedicated host concierge, and bottle service perks.</p>
             </div>
             <a href="vip.html" class="btn btn-primary btn-sm"><i class="fas fa-crown"></i> VIP Membership Guide</a>
           </div>
@@ -410,9 +410,13 @@
           </div>
 
           <!-- Concierge Request Box -->
-          <div class="feature-card" style="padding: 2rem; background: var(--color-surface); border: 1px solid var(--color-border);">
-            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem;"><i class="fas fa-concierge-bell" style="color: var(--color-accent); margin-right: 0.5rem;"></i> Submit VIP Concierge Request</h3>
-            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">Need special celebratory arrangements, bottle service brands, or dietary adjustments for an upcoming reservation?</p>
+          <div class="feature-card" style="padding: 2.25rem 2rem; background: var(--color-surface); border: 1px solid var(--color-border);">
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+              <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; text-align: center; line-height: 1.3;">
+                <i class="fas fa-concierge-bell" style="color: var(--color-accent); margin-inline-end: 0.45rem;"></i>Submit VIP Concierge Request
+              </h3>
+              <p style="font-size: 0.875rem; color: var(--color-text-muted); max-width: 600px; margin: 0 auto; text-align: center; line-height: 1.5;">Need special celebratory arrangements, bottle service brands, or dietary adjustments for an upcoming reservation?</p>
+            </div>
             <form class="dash-concierge-form" onsubmit="alert('VIP Concierge request logged! Host Marcus D. will contact you within 2 hours.'); return false;">
               <div class="dash-form-grid">
                 <div class="dash-form-group">
@@ -437,7 +441,9 @@
                 <label>Special Instructions &amp; Requests</label>
                 <textarea rows="3" placeholder="Tell your VIP host about champagne preferences, guest names, or arrival timing..."></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Send to VIP Concierge</button>
+              <div style="display: flex; justify-content: center; margin-top: 1rem;">
+                <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Send to VIP Concierge</button>
+              </div>
             </form>
           </div>
         </section>
@@ -448,8 +454,8 @@
         <section class="dash-tab-content" id="rewardsSection" data-tab="rewards">
           <div class="dash-page-header">
             <div>
-              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">Bar Tab, Mixology &amp; Club Credits</h1>
-              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Live lounge spending overview, cocktail loyalty point redemption, and instant digital top-up.</p>
+              <h1>Bar Tab, Mixology &amp; Club Credits</h1>
+              <p>Live lounge spending overview, cocktail loyalty point redemption, and instant digital top-up.</p>
             </div>
             <button class="btn btn-primary btn-sm" onclick="alert('Instant Top-Up $50.00 loaded to Bar Tab!')"><i class="fas fa-wallet"></i> Top-Up Bar Balance</button>
           </div>
@@ -556,8 +562,8 @@
         <section class="dash-tab-content" id="presalesSection" data-tab="presales">
           <div class="dash-page-header">
             <div>
-              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">Headliner Presales &amp; Early Drops</h1>
-              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Obsidian VIP 48-Hour advance access window before public general on-sale.</p>
+              <h1>Headliner Presales &amp; Early Drops</h1>
+              <p>Obsidian VIP 48-Hour advance access window before public general on-sale.</p>
             </div>
             <button class="btn btn-outline btn-sm" onclick="alert('Presale drop feeds synchronized!')"><i class="fas fa-rotate"></i> Refresh Early Drops</button>
           </div>
@@ -649,8 +655,8 @@
         <section class="dash-tab-content" id="settingsSection" data-tab="settings">
           <div class="dash-page-header">
             <div>
-              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">Patron Account &amp; Preferences</h1>
-              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Manage your personal profile, notification alerts, password credentials, and view settings.</p>
+              <h1>Patron Account &amp; Preferences</h1>
+              <p>Manage your personal profile, notification alerts, password credentials, and view settings.</p>
             </div>
             <button class="btn btn-primary btn-sm" onclick="alert('Account preferences updated successfully!')"><i class="fas fa-floppy-disk"></i> Save Changes</button>
           </div>

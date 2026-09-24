@@ -106,29 +106,86 @@
     grid-template-columns: 1fr;
     padding: 3rem 2rem;
     text-align: center;
+    gap: 2.25rem;
   }
 
-  .cta-action-box {
-    max-width: 500px;
+  .cta-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    max-width: 680px;
     margin: 0 auto;
     width: 100%;
   }
 
+  .cta-content .section-eyebrow {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: inline-flex !important;
+  }
+
+  .cta-title {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .cta-desc {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 600px;
+  }
+
+  .cta-buttons-wrap {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+  }
+
+  .cta-action-box {
+    max-width: 520px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .cta-perks-row {
+    justify-content: center !important;
+  }
+
   .categories-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
 
   .featured-nights-layout {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
 
-  .featured-big-card {
-    min-height: 380px;
+  .featured-card.featured-card-large {
+    min-height: 400px;
+  }
+
+  .featured-nights-side-stack {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .featured-card.featured-card-small {
+    min-height: 260px;
   }
 
   .moments-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1.25rem;
   }
 
   .bento-grid,
@@ -137,6 +194,34 @@
   .grid-4,
   .grid-3 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Center single odd pricing card on 2-col tablet grids */
+  .grid-3 > .pricing-card:last-child:nth-child(odd),
+  .pricing-grid > .pricing-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: 440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .pricing-card {
+    text-align: center;
+  }
+
+  .pricing-features {
+    margin: 0 auto 2rem auto !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  [dir="rtl"] .pricing-features {
+    text-align: right !important;
+    margin: 0 auto 2rem auto !important;
   }
 
   .split-layout {
@@ -537,20 +622,25 @@
 
   .cta-perks-row {
     flex-direction: column !important;
-    align-items: flex-start !important;
+    align-items: center !important;
+    justify-content: center !important;
     gap: 0.5rem !important;
-    padding-left: 0.25rem !important;
     margin-top: 1rem !important;
+    text-align: center !important;
   }
 
   .cta-perks-row span {
     white-space: normal !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
 
   .cta-buttons-wrap {
     flex-direction: column !important;
     width: 100% !important;
     gap: 0.85rem !important;
+    align-items: center !important;
   }
 
   .cta-buttons-wrap .btn {
@@ -647,21 +737,42 @@
   .featured-nights-layout {
     grid-template-columns: 1fr !important;
     gap: 1.25rem !important;
+    width: 100% !important;
+    max-width: 460px !important;
+    margin: 0 auto !important;
   }
 
-  .featured-big-card {
-    min-height: 380px !important;
-  }
-
-  .featured-mini-card {
-    min-height: 260px !important;
+  .featured-card.featured-card-large {
+    min-height: 360px !important;
     height: auto !important;
+    width: 100% !important;
   }
 
+  .featured-nights-side-stack {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+  }
+
+  .featured-card.featured-card-small {
+    min-height: 250px !important;
+    height: auto !important;
+    width: 100% !important;
+  }
+
+  .featured-card-bottom-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.5rem !important;
+  }
+
+  .featured-card-content,
+  .featured-show-content,
   .featured-card-overlay,
   .featured-big-card .featured-card-overlay,
   .featured-mini-card .featured-card-overlay {
-    padding: 1.25rem !important;
+    padding: 1.35rem 1.25rem !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -671,17 +782,21 @@
     width: 100% !important;
   }
 
+  .featured-card-badge-wrap,
+  .featured-card-content .badge,
+  .featured-show-content .badge,
   .featured-card-overlay .badge {
     align-self: flex-start !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    margin-bottom: 0.45rem !important;
+    margin-bottom: 0.5rem !important;
     font-size: 0.6875rem !important;
     padding: 0.25rem 0.65rem !important;
   }
 
-  .featured-card-overlay h3,
   .featured-card-title,
+  .featured-show-title,
+  .featured-card-overlay h3,
   .featured-card-overlay h4 {
     font-size: 1.2rem !important;
     text-align: left !important;
@@ -692,39 +807,50 @@
     width: 100% !important;
   }
 
+  .featured-card-desc,
+  .featured-show-desc,
   .featured-card-overlay p {
     text-align: left !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    margin-bottom: 0.75rem !important;
+    margin-bottom: 0.65rem !important;
     font-size: 0.8125rem !important;
     line-height: 1.45 !important;
     width: 100% !important;
     color: #CBD5E1 !important;
   }
 
+  .featured-card-meta,
+  .featured-show-timing,
+  .featured-showtime {
+    font-size: 0.775rem !important;
+    margin-bottom: 0.95rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.45rem !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+
+  .featured-card-actions,
+  .featured-show-action,
   .featured-action-row {
     display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0.4rem !important;
+    align-items: center !important;
     width: 100% !important;
+    margin-top: auto !important;
     margin-left: 0 !important;
   }
 
+  .featured-card-actions .btn,
+  .featured-show-action .btn,
   .featured-action-row .btn,
   .featured-card-overlay .btn {
-    align-self: flex-start !important;
-    margin-left: 0 !important;
-    width: auto !important;
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
     font-size: 0.8125rem !important;
-    padding: 0.45rem 0.95rem !important;
-  }
-
-  .featured-showtime {
-    text-align: left !important;
-    margin-left: 0 !important;
-    font-size: 0.75rem !important;
+    padding: 0.55rem 1rem !important;
   }
 
   .ticket-stats-grid {
@@ -829,6 +955,12 @@
     width: 100%;
   }
 
+  .pricing-card {
+    max-width: 440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
   .bento-body h3,
   .bento-body p {
     min-height: auto !important;
@@ -847,7 +979,7 @@
   }
 
   .dashboard-main {
-    padding: 1.25rem 1rem;
+    padding: 0.85rem 0.85rem 1.75rem 0.85rem !important;
   }
 }
 
