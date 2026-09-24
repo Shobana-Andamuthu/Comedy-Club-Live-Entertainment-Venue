@@ -538,17 +538,23 @@
     gap: 1.5rem;
   }
 
-  .dash-form-grid,
-  .form-row {
+  .form-row,
+  .dash-form-grid {
     grid-template-columns: 1fr !important;
-    gap: 0.95rem !important;
-    margin-bottom: 0.95rem !important;
+    gap: 1.15rem !important;
+    margin-bottom: 1.15rem !important;
     width: 100% !important;
     box-sizing: border-box !important;
   }
 
-  .dash-form-group {
+  .form-row > .form-group,
+  .dash-form-grid > .dash-form-group {
     margin-bottom: 0 !important;
+  }
+
+  .form-group,
+  .dash-form-group {
+    margin-bottom: 1.15rem !important;
     gap: 0.35rem !important;
     width: 100% !important;
   }
