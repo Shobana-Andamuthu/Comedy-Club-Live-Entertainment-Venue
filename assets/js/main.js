@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTop();
   initCtaForms();
   initDashboardTabs();
+  initCustomSelects();
 });
 
 /* --- Attractive Page Loader Dismissal --- */
@@ -281,4 +282,152 @@ function initDashboardTabs() {
     switchTab(window.location.hash);
   }
 }
+
+/* --- Elegant & Fully Responsive Custom Select Dropdown UI --- */
+function initCustomSelects() {
+  const selects = document.querySelectorAll('select:not([data-no-custom])');
+  if (selects.length === 0) return;
+
+  selects.forEach(select => {
+    if (select.dataset.customized === 'true') return;
+    select.dataset.customized = 'true';
+
+    // Create custom wrapper
+    const wrapper = document.createElement('div');
+    wrapper.className = 'custom-select-wrapper';
+    if (select.classList.contains('form-control')) {
+      wrapper.classList.add('custom-select-form-control');
+    }
+
+    // Hide original native select accessible way
+    select.classList.add('custom-select-native-hidden');
+    select.parentNode.insertBefore(wrapper, select);
+    wrapper.appendChild(select);
+
+    // Create trigger
+    const trigger = document.createElement('div');
+    trigger.className = 'custom-select-trigger';
+    trigger.tabIndex = 0;
+    trigger.setAttribute('role', 'combobox');
+    trigger.setAttribute('aria-expanded', 'false');
+
+    const labelSpan = document.createElement('span');
+    labelSpan.className = 'custom-select-label';
+
+    const arrowIcon = document.createElement('i');
+    arrowIcon.className = 'fas fa-chevron-down custom-select-arrow';
+
+    trigger.appendChild(labelSpan);
+    trigger.appendChild(arrowIcon);
+    wrapper.appendChild(trigger);
+
+    // Create dropdown menu
+    const dropdown = document.createElement('div');
+    dropdown.className = 'custom-select-dropdown';
+    dropdown.setAttribute('role', 'listbox');
+    wrapper.appendChild(dropdown);
+
+    // Populate options
+    function buildOptions() {
+      dropdown.innerHTML = '';
+      const selectedIndex = select.selectedIndex >= 0 ? select.selectedIndex : 0;
+      const selectedOpt = select.options[selectedIndex];
+      labelSpan.textContent = selectedOpt ? selectedOpt.text : 'Select...';
+
+      Array.from(select.options).forEach((opt, idx) => {
+        const optionEl = document.createElement('div');
+        optionEl.className = 'custom-select-option';
+        optionEl.dataset.value = opt.value;
+        optionEl.dataset.index = idx;
+        optionEl.setAttribute('role', 'option');
+
+        if (opt.value === '' && idx === 0) {
+          optionEl.classList.add('is-placeholder');
+        }
+
+        const textSpan = document.createElement('span');
+        textSpan.className = 'option-text';
+        textSpan.textContent = opt.text;
+        optionEl.appendChild(textSpan);
+
+        if (idx === select.selectedIndex) {
+          optionEl.classList.add('is-selected');
+          const checkIcon = document.createElement('i');
+          checkIcon.className = 'fas fa-check option-check';
+          optionEl.appendChild(checkIcon);
+        }
+
+        optionEl.addEventListener('click', (e) => {
+          e.stopPropagation();
+          select.selectedIndex = idx;
+          select.value = opt.value;
+          select.dispatchEvent(new Event('change', { bubbles: true }));
+          select.dispatchEvent(new Event('input', { bubbles: true }));
+          buildOptions();
+          closeAllCustomSelects();
+          trigger.focus();
+        });
+
+        dropdown.appendChild(optionEl);
+      });
+    }
+
+    buildOptions();
+
+    // Toggle dropdown on trigger click
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = wrapper.classList.contains('is-open');
+      closeAllCustomSelects();
+      if (!isOpen) {
+        wrapper.classList.add('is-open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    // Keyboard navigation
+    trigger.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (!wrapper.classList.contains('is-open')) {
+          closeAllCustomSelects();
+          wrapper.classList.add('is-open');
+          trigger.setAttribute('aria-expanded', 'true');
+        } else if (e.key === 'ArrowDown') {
+          const nextIndex = Math.min(select.selectedIndex + 1, select.options.length - 1);
+          select.selectedIndex = nextIndex;
+          select.dispatchEvent(new Event('change', { bubbles: true }));
+          buildOptions();
+        }
+      } else if (e.key === 'ArrowUp' && wrapper.classList.contains('is-open')) {
+        e.preventDefault();
+        const prevIndex = Math.max(select.selectedIndex - 1, 0);
+        select.selectedIndex = prevIndex;
+        select.dispatchEvent(new Event('change', { bubbles: true }));
+        buildOptions();
+      } else if (e.key === 'Escape' || e.key === 'Tab') {
+        closeAllCustomSelects();
+      }
+    });
+
+    // Listen to programmatic changes on native select
+    select.addEventListener('change', () => {
+      buildOptions();
+    });
+  });
+}
+
+function closeAllCustomSelects() {
+  document.querySelectorAll('.custom-select-wrapper.is-open').forEach(w => {
+    w.classList.remove('is-open');
+    const tr = w.querySelector('.custom-select-trigger');
+    if (tr) tr.setAttribute('aria-expanded', 'false');
+  });
+}
+
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.custom-select-wrapper')) {
+    closeAllCustomSelects();
+  }
+});
 

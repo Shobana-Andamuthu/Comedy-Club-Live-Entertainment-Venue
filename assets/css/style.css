@@ -2316,6 +2316,173 @@ select.form-control {
   padding-left: 2.75rem;
 }
 
+/* ==========================================================================
+   CUSTOM SELECT DROPDOWN COMPONENT (100% RESPONSIVE & BOUNDED)
+   ========================================================================== */
+.custom-select-native-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  font-family: inherit;
+  user-select: none;
+}
+
+.custom-select-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  min-height: 48px;
+  padding: 0.75rem 1.15rem;
+  background-color: var(--color-surface-soft);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+}
+
+.dash-form-group .custom-select-trigger {
+  min-height: 42px;
+  padding: 0.65rem 0.95rem;
+  font-size: 0.9rem;
+}
+
+.custom-select-wrapper.is-open .custom-select-trigger,
+.custom-select-trigger:focus-visible {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(255, 77, 109, 0.2);
+}
+
+.custom-select-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+[dir="rtl"] .custom-select-label {
+  text-align: right;
+}
+
+.custom-select-arrow {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+  margin-inline-start: 0.75rem;
+  flex-shrink: 0;
+}
+
+.custom-select-wrapper.is-open .custom-select-arrow {
+  transform: rotate(180deg);
+  color: var(--color-accent);
+}
+
+.custom-select-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  max-height: 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+  padding: 0.35rem;
+}
+
+[data-theme="dark"] .custom-select-dropdown {
+  background-color: #111625;
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+}
+
+.custom-select-wrapper.is-open .custom-select-dropdown {
+  display: block;
+  animation: selectDropFade 0.18s ease-out;
+}
+
+@keyframes selectDropFade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-select-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+  border-radius: calc(var(--radius-sm) - 2px);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  white-space: normal;
+  word-break: break-word;
+  line-height: 1.4;
+  margin-bottom: 2px;
+}
+
+.custom-select-option:hover {
+  background-color: rgba(255, 77, 109, 0.12);
+  color: var(--color-accent);
+}
+
+.custom-select-option.is-selected {
+  background-color: rgba(255, 77, 109, 0.18);
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
+.custom-select-option .option-check {
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  margin-inline-start: 0.5rem;
+  flex-shrink: 0;
+}
+
+.custom-select-option.is-placeholder {
+  color: var(--color-text-muted);
+}
+
 input[type="number"].form-control::-webkit-inner-spin-button,
 input[type="number"].form-control::-webkit-outer-spin-button {
   opacity: 1 !important;

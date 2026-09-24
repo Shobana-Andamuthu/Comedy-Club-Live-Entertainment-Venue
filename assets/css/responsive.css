@@ -592,6 +592,22 @@
     color: #F8FAFC;
   }
 
+  .custom-select-trigger {
+    min-height: 44px !important;
+    padding: 0.65rem 0.95rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .custom-select-dropdown {
+    max-height: 210px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35) !important;
+  }
+
+  .custom-select-option {
+    padding: 0.6rem 0.75rem !important;
+    font-size: 0.875rem !important;
+  }
+
   .form-card,
   .dash-ticket-card,
   .feature-card {
