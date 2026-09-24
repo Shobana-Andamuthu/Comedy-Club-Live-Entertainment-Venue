@@ -3,6 +3,16 @@
    Full viewport coverage: 200px -> 1920px+
    ========================================================================== */
 
+/* Universal Eyebrow Pill Sizing & Alignment (Text Width Only) */
+.section-eyebrow,
+.h2-hero-eyebrow,
+.eyebrow {
+  width: fit-content !important;
+  max-width: fit-content !important;
+  display: inline-flex !important;
+  box-sizing: border-box !important;
+}
+
 /* Large Desktops (1440px+) */
 @media (min-width: 1440px) {
   :root {
@@ -232,6 +242,11 @@
   /* Auth & Dashboard Layout on Tablet */
   .auth-wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .dash-form-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.1rem !important;
   }
 
   .auth-visual-pane {
@@ -526,8 +541,16 @@
   .dash-form-grid,
   .form-row {
     grid-template-columns: 1fr !important;
+    gap: 0.95rem !important;
+    margin-bottom: 0.95rem !important;
     width: 100% !important;
     box-sizing: border-box !important;
+  }
+
+  .dash-form-group {
+    margin-bottom: 0 !important;
+    gap: 0.35rem !important;
+    width: 100% !important;
   }
 
   .dash-form-group input,
@@ -538,8 +561,35 @@
     max-width: 100% !important;
     min-width: 0 !important;
     box-sizing: border-box !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
+    padding: 0.7rem 0.95rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  select.form-control,
+  .dash-form-group select {
+    background-repeat: no-repeat !important;
+    background-size: 14px 14px !important;
+    background-position: right 1rem center !important;
+    padding-right: 2.75rem !important;
+  }
+
+  [dir="rtl"] select.form-control,
+  [dir="rtl"] .dash-form-group select {
+    background-position: left 1rem center !important;
+    padding-right: 0.95rem !important;
+    padding-left: 2.75rem !important;
+  }
+
+  .dash-form-group select option,
+  select.form-control option {
+    background-color: #FFFFFF;
+    color: #080B14;
+  }
+
+  [data-theme="dark"] .dash-form-group select option,
+  [data-theme="dark"] select.form-control option {
+    background-color: #131828;
+    color: #F8FAFC;
   }
 
   .form-card,
@@ -549,7 +599,6 @@
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
-    overflow: hidden !important;
   }
 
   .experience-visual-stack {
