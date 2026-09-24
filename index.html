@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Laugh Vault — Premier Comedy Club &amp; Live Entertainment Lounge</title>
+  <meta name="description" content="Experience world-class stand-up comedy, headliner showcases, craft cocktails, and unforgettable nightlife at The Laugh Vault.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="loader-icon-wrap">
+        <div class="loader-mic-icon">
+          <i class="fas fa-microphone-lines"></i>
+        </div>
+        <div class="loader-pulse-ring"></div>
+        <div class="loader-pulse-ring delay"></div>
+      </div>
+      <div class="loader-brand-title">THE LAUGH VAULT</div>
+      <div class="loader-brand-subtitle">LIVE ENTERTAINMENT &amp; COMEDY</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" id="mainBrandLogo">
+          <div class="logo-icon">
+            <i class="fas fa-microphone-lines"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">LAUGH VAULT</span>
+            <span class="brand-subtitle">COMEDY CLUB</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu (7 Main Items) -->
+        <ul class="nav-menu" id="desktopNavMenu">
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link active" id="navHomeDropdown" aria-haspopup="true">
+              Home <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link active">Home 1</a>
+              </li>
+              <li>
+                <a href="home-2.html" class="dropdown-link">Home 2</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="shows.html" class="nav-link" id="navShowsLink">Shows</a>
+          </li>
+          <li class="nav-item">
+            <a href="tickets.html" class="nav-link" id="navTicketsLink">Tickets</a>
+          </li>
+          <li class="nav-item">
+            <a href="vip.html" class="nav-link" id="navVipLink">VIP</a>
+          </li>
+          <li class="nav-item">
+            <a href="rentals.html" class="nav-link" id="navRentalsLink">Rentals</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" id="navAboutLink">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" id="navContactLink">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link" id="navDashboardLink">Dashboard</a>
+          </li>
+        </ul>
+
+        <!-- Right Side Nav Actions -->
+        <div class="nav-actions">
+          <!-- Theme Toggle -->
+          <button class="control-btn theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme Mode" title="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="control-btn rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle Text Direction" title="Toggle RTL/LTR">
+            RTL
+          </button>
+
+          <!-- Login Button -->
+          <a href="login.html" class="btn btn-primary btn-sm desktop-only-btn" id="navLoginBtn">
+            <i class="fas fa-arrow-right-to-bracket"></i> Login
+          </a>
+
+          <!-- Hamburger Button for Mobile / Tablet -->
+          <button class="hamburger-btn" id="mobileHamburgerBtn" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <ul class="mobile-nav-links">
+        <li>
+          <a href="#" class="mobile-nav-link mobile-dropdown-toggle active">
+            <span>Home</span>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
+          </a>
+          <ul class="mobile-submenu">
+            <li><a href="index.html" class="mobile-submenu-link active">Home 1</a></li>
+            <li><a href="home-2.html" class="mobile-submenu-link">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="shows.html" class="mobile-nav-link">Shows</a></li>
+        <li><a href="tickets.html" class="mobile-nav-link">Tickets</a></li>
+        <li><a href="vip.html" class="mobile-nav-link">VIP</a></li>
+        <li><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+
+      <div class="mobile-drawer-bottom">
+        <a href="login.html" class="btn btn-primary" style="width: 100%;">
+          <i class="fas fa-arrow-right-to-bracket"></i> Login
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1: CINEMATIC COMEDY HERO
+       ========================================================================== -->
+  <section class="h1-hero-section" id="heroSection">
+    <div class="container">
+      <div class="h1-hero-grid">
+        <!-- Hero Text Content -->
+        <div class="h1-hero-content">
+          <div class="section-eyebrow">
+            <i class="fas fa-star"></i> DOWNTOWN'S PREMIER LIVE STAGE
+          </div>
+          <h1 class="h1-hero-title">
+            Where Unfiltered Laughs Meet <span class="text-gradient">Electric Nights.</span>
+          </h1>
+          <p class="h1-hero-desc">
+            Step into the heartbeat of metropolitan nightlife. Experience legendary headliners, groundbreaking up-and-coming standups, and prohibition-style mixology in our intimate 180-seat showroom.
+          </p>
+
+          <!-- Tonight's Show Card -->
+          <div class="h1-hero-tonight-card">
+            <div class="tonight-pulse"></div>
+            <div class="tonight-info">
+              <strong>TONIGHT: Julian Cole &amp; The Friday All-Stars</strong>
+              <span>Doors open 7:30 PM • Show starts 8:30 PM • Only 14 Tables Left</span>
+            </div>
+          </div>
+
+          <!-- Hero Actions -->
+          <div class="h1-hero-actions">
+            <a href="tickets.html" class="btn btn-primary btn-lg" id="heroBookTicketsBtn">
+              <i class="fas fa-ticket"></i> Book Tonight's Tickets
+            </a>
+            <a href="shows.html" class="btn btn-outline btn-lg" id="heroExploreShowsBtn">
+              <i class="fas fa-calendar-days"></i> Full Calendar
+            </a>
+          </div>
+
+          <!-- Quick Highlights Stats -->
+          <div class="h1-hero-stats">
+            <div class="stat-item">
+              <h3>180</h3>
+              <p>Intimate Seating</p>
+            </div>
+            <div class="stat-item">
+              <h3>500+</h3>
+              <p>Shows Annually</p>
+            </div>
+            <div class="stat-item">
+              <h3>4.9★</h3>
+              <p>Audience Rating</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Media -->
+        <div class="h1-hero-media">
+          <div class="h1-media-frame">
+            <img src="assets/images/hero/home1_hero.jpg" alt="Stand-up comedian performing live under spotlights at The Velvet Mic">
+          </div>
+          <!-- Floating Feature Badge -->
+          <div class="h1-floating-badge">
+            <div class="floating-icon">
+              <i class="fas fa-martini-glass-citron"></i>
+            </div>
+            <div>
+              <strong style="display:block; font-size: 0.9375rem; color: var(--color-text);">Full Service Cocktail Bar</strong>
+              <span style="font-size: 0.8125rem; color: var(--color-text-muted);">2-drink minimum • Gourmet bites</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: UPCOMING FEATURED SHOWS (4 Cards Per Filter Category)
+       ========================================================================== -->
+  <section class="h1-shows-section" id="featuredShowsSection">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow eyebrow-violet">
+          <i class="fas fa-sparkles"></i> LIVE CALENDAR
+        </div>
+        <h2 class="section-title">Upcoming Shows &amp; Headliners</h2>
+        <p class="section-desc">Handpicked comedic masterminds performing live. Reserve your table early before tickets sell out.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="shows-filter-bar">
+        <button class="filter-btn active" data-filter="all">All Shows</button>
+        <button class="filter-btn" data-filter="standup">Stand-Up Specials</button>
+        <button class="filter-btn" data-filter="battle">Roast Royale</button>
+        <button class="filter-btn" data-filter="improv">Midnight Improv</button>
+        <button class="filter-btn" data-filter="headliner">Touring Headliners</button>
+      </div>
+
+      <!-- Show Cards Grid -->
+      <div class="shows-grid">
+        
+        <!-- STAND-UP SPECIALS (4 Cards) -->
+        <article class="show-card" data-category="standup">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/standup_1.jpg" alt="Late Night Unfiltered Stand-up Comedy">
+            <div class="show-date-badge">
+              <span class="day">26</span>
+              <span class="month">SEP</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Stand-Up Special</span>
+            <h3 class="show-card-title">Late Night Unfiltered</h3>
+            <p class="show-card-comedian">Starring Marcus Thorne &amp; Guest Comedians</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>General Adm</span>
+                <strong>$32.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="standup">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/standup_2.jpg" alt="City Lights Standup Showcase">
+            <div class="show-date-badge">
+              <span class="day">27</span>
+              <span class="month">SEP</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Stand-Up Special</span>
+            <h3 class="show-card-title">City Lights Showcase</h3>
+            <p class="show-card-comedian">Starring Elena Rostova &amp; Local Favorites</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>General Adm</span>
+                <strong>$29.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="standup">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/standup_3.jpg" alt="The Dark Roast Standup Hour">
+            <div class="show-date-badge">
+              <span class="day">03</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Stand-Up Special</span>
+            <h3 class="show-card-title">The Dark Roast Hour</h3>
+            <p class="show-card-comedian">Starring Darius King Live on Stage</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>VIP Booths</span>
+                <strong>$35.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="standup">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/standup_4.jpg" alt="Midnight Storytellers Standup Special">
+            <div class="show-date-badge">
+              <span class="day">04</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Stand-Up Special</span>
+            <h3 class="show-card-title">Midnight Storytellers</h3>
+            <p class="show-card-comedian">Intimate Anecdotes with Arthur Thompson</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>General Adm</span>
+                <strong>$28.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- ROAST ROYALE (4 Cards) -->
+        <article class="show-card" data-category="battle">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/roast_1.jpg" alt="Battle of Punchlines Roast Royale">
+            <div class="show-date-badge">
+              <span class="day">28</span>
+              <span class="month">SEP</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Roast Royale</span>
+            <h3 class="show-card-title">Battle of Punchlines</h3>
+            <p class="show-card-comedian">8 Comedians, 1 Bracket, No Mercy</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>General Adm</span>
+                <strong>$28.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="battle">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/roast_2.jpg" alt="The Great Roast Battle Stage 2">
+            <div class="show-date-badge">
+              <span class="day">05</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Roast Royale</span>
+            <h3 class="show-card-title">Judges Elimination Duel</h3>
+            <p class="show-card-comedian">Panel Judged Standup Roast Showdown</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>General Adm</span>
+                <strong>$30.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="battle">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/roast_3.jpg" alt="Underground Comedy Cellar Roast Duel">
+            <div class="show-date-badge">
+              <span class="day">10</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Roast Royale</span>
+            <h3 class="show-card-title">Cellar Roast Duel</h3>
+            <p class="show-card-comedian">Raw, Uncensored Head-to-Head Banter</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>General Adm</span>
+                <strong>$25.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="battle">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/roast_4.jpg" alt="No Mercy Verbal Warfare">
+            <div class="show-date-badge">
+              <span class="day">12</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Roast Royale</span>
+            <h3 class="show-card-title">Queens of Roast</h3>
+            <p class="show-card-comedian">High Voltage Sarcasm &amp; Comebacks</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>VIP Available</span>
+                <strong>$32.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- MIDNIGHT IMPROV (4 Cards) -->
+        <article class="show-card" data-category="improv">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/improv_1.jpg" alt="Spontaneous Comedy Night Improv Troupe">
+            <div class="show-date-badge">
+              <span class="day">29</span>
+              <span class="month">SEP</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Midnight Improv</span>
+            <h3 class="show-card-title">Spontaneous Comedy</h3>
+            <p class="show-card-comedian">3-Troupe Spontaneous Audience Games</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>General Adm</span>
+                <strong>$25.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="improv">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/improv_2.jpg" alt="The Laugh Cellar Duo Improv">
+            <div class="show-date-badge">
+              <span class="day">06</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Midnight Improv</span>
+            <h3 class="show-card-title">The Laugh Cellar Duo</h3>
+            <p class="show-card-comedian">Fast Paced Skits &amp; Crowd Prompts</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>General Adm</span>
+                <strong>$24.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="improv">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/improv_3.jpg" alt="Whose Roast Is It Anyway Improv">
+            <div class="show-date-badge">
+              <span class="day">08</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Midnight Improv</span>
+            <h3 class="show-card-title">Whose Roast Is It Anyway?</h3>
+            <p class="show-card-comedian">High Octane Improv &amp; Banter Battles</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>General Adm</span>
+                <strong>$26.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="improv">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/improv_4.jpg" alt="Midnight Chaos Improv Showcase">
+            <div class="show-date-badge">
+              <span class="day">15</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Midnight Improv</span>
+            <h3 class="show-card-title">Midnight Chaos Royale</h3>
+            <p class="show-card-comedian">Unscripted Late Night Improv Jam</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>General Adm</span>
+                <strong>$22.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOURING HEADLINERS (4 Cards) -->
+        <article class="show-card" data-category="headliner">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/headliner_1.jpg" alt="The Sovereign Tour International Headliner">
+            <div class="show-date-badge">
+              <span class="day">02</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Touring Headliner</span>
+            <h3 class="show-card-title">The Sovereign Tour</h3>
+            <p class="show-card-comedian">Direct from HBO &amp; Comedy Central</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>VIP Available</span>
+                <strong>$45.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="headliner">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/headliner_2.jpg" alt="Los Angeles All-Star Headliner Tour">
+            <div class="show-date-badge">
+              <span class="day">09</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Touring Headliner</span>
+            <h3 class="show-card-title">West Coast Gala Live</h3>
+            <p class="show-card-comedian">Special 75-Min Headliner Showcase</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>VIP Tables</span>
+                <strong>$42.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="headliner">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/headliner_3.jpg" alt="Netflix Special Comedian Headliner">
+            <div class="show-date-badge">
+              <span class="day">16</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Touring Headliner</span>
+            <h3 class="show-card-title">The Laughing Crow Hour</h3>
+            <p class="show-card-comedian">World Premiere New Material Tour</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>VIP Available</span>
+                <strong>$40.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="show-card" data-category="headliner">
+          <div class="show-card-img-wrapper">
+            <img src="assets/images/shows/headliner_4.jpg" alt="Julian Cole Special Homecoming Headliner">
+            <div class="show-date-badge">
+              <span class="day">23</span>
+              <span class="month">OCT</span>
+            </div>
+          </div>
+          <div class="show-card-content">
+            <span class="show-category-tag">Touring Headliner</span>
+            <h3 class="show-card-title">Julian Cole Homecoming</h3>
+            <p class="show-card-comedian">Exclusive 2-Night Theater Residency</p>
+            <div class="show-card-footer">
+              <div class="show-price">
+                <span>Prime Seats</span>
+                <strong>$48.00</strong>
+              </div>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Get Tickets</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: MEET THE COMEDIANS (Real Headliner Photographs)
+       ========================================================================== -->
+  <section class="h1-comedians-section" id="comediansSection">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <i class="fas fa-masks-theater"></i> THE TALENT
+        </div>
+        <h2 class="section-title">Meet This Season's Resident Comedians</h2>
+        <p class="section-desc">From veteran late-night writers to viral podcast icons, meet the voices making the city roar.</p>
+      </div>
+
+      <div class="comedians-grid">
+        <!-- Comedian 1 -->
+        <div class="comedian-card">
+          <div class="comedian-img-box">
+            <img src="assets/images/comedians/julian_cole.jpg" alt="Julian Cole stand-up comedian portrait">
+          </div>
+          <div class="comedian-info">
+            <span class="badge badge-coral" style="margin-bottom: 0.5rem;">Resident Headliner</span>
+            <h3 class="comedian-name">Julian Cole</h3>
+            <p class="comedian-specialty">Observational Comedy &amp; Sarcasm</p>
+            <p class="comedian-bio">Over 15 years on national stages with 3 special releases. Catch him every Friday night.</p>
+          </div>
+        </div>
+
+        <!-- Comedian 2 -->
+        <div class="comedian-card">
+          <div class="comedian-img-box">
+            <img src="assets/images/comedians/maya_vance.jpg" alt="Maya Vance comedian on stage with microphone">
+          </div>
+          <div class="comedian-info">
+            <span class="badge badge-gold" style="margin-bottom: 0.5rem;">Satirist &amp; Writer</span>
+            <h3 class="comedian-name">Maya Vance</h3>
+            <p class="comedian-specialty">Sharp Satirical Storytelling</p>
+            <p class="comedian-bio">Known for razor-sharp wit and viral topical monologues featured across streaming specials.</p>
+          </div>
+        </div>
+
+        <!-- Comedian 3 -->
+        <div class="comedian-card">
+          <div class="comedian-img-box">
+            <img src="assets/images/comedians/darius_king.jpg" alt="Darius King comedian on stage">
+          </div>
+          <div class="comedian-info">
+            <span class="badge badge-violet" style="margin-bottom: 0.5rem;">Crowd Master</span>
+            <h3 class="comedian-name">Darius King</h3>
+            <p class="comedian-specialty">High-Energy Crowd Roasts</p>
+            <p class="comedian-bio">The undeniable king of spontaneous improv and front-row interaction that leaves audiences crying with laughter.</p>
+          </div>
+        </div>
+
+        <!-- Comedian 4 -->
+        <div class="comedian-card">
+          <div class="comedian-img-box">
+            <img src="assets/images/comedians/chloe_bennett.jpg" alt="Chloe Bennett stand-up comedian portrait">
+          </div>
+          <div class="comedian-info">
+            <span class="badge badge-coral" style="margin-bottom: 0.5rem;">Special Guest</span>
+            <h3 class="comedian-name">Chloe Bennett</h3>
+            <p class="comedian-specialty">Dark Humor &amp; Musical Antics</p>
+            <p class="comedian-bio">Edinburgh Fringe standout blending unexpected comedic songcraft with candid personal stories.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: THE CLUB EXPERIENCE (Real Photography Split Layout)
+       ========================================================================== -->
+  <section class="h1-experience-section" id="experienceSection">
+    <div class="container">
+      <div class="experience-split">
+        <!-- Visual Stack -->
+        <div class="experience-visual-stack">
+          <div class="exp-photo">
+            <img src="assets/images/experience/cocktail_lounge.jpg" alt="Prohibition Craft Cocktail Bar at The Velvet Mic">
+          </div>
+          <div class="exp-photo">
+            <img src="assets/images/experience/audience_laughing.jpg" alt="Intimate audience laughter and ambient lighting">
+          </div>
+        </div>
+
+        <!-- Editorial Content -->
+        <div class="experience-content">
+          <div class="section-eyebrow eyebrow-violet">
+            <i class="fas fa-champagne-glasses"></i> THE NIGHTLIFE EXPERIENCE
+          </div>
+          <h2 class="section-title">Not Just a Show. An Unforgettable Night Out.</h2>
+          <p class="section-desc">
+            We designed The Velvet Mic to deliver the purest, most immersive live comedy atmosphere in the country. From velvet-clad booths to precision acoustic tuning, every seat is prime.
+          </p>
+
+          <div class="perks-list">
+            <div class="perk-item">
+              <div class="perk-icon">
+                <i class="fas fa-glass-whiskey"></i>
+              </div>
+              <div class="perk-text">
+                <h4>Prohibition Mixology &amp; Kitchen</h4>
+                <p>Enjoy bespoke cocktails, craft beer taps, and artisan shareables delivered straight to your table during the performance.</p>
+              </div>
+            </div>
+
+            <div class="perk-item">
+              <div class="perk-icon">
+                <i class="fas fa-couch"></i>
+              </div>
+              <div class="perk-text">
+                <h4>Zero Obstructed Views</h4>
+                <p>Tiered theater seating and curved velvet booths ensure intimate proximity to the stage from any angle.</p>
+              </div>
+            </div>
+
+            <div class="perk-item">
+              <div class="perk-icon">
+                <i class="fas fa-crown"></i>
+              </div>
+              <div class="perk-text">
+                <h4>VIP Table Service</h4>
+                <p>Priority skip-the-line entry, dedicated cocktail server, and complimentary house bubbles for VIP passholders.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <a href="vip.html" class="btn btn-secondary">
+              <i class="fas fa-gem"></i> Explore VIP Memberships
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: UPCOMING NIGHT TICKET CTA
+       ========================================================================== -->
+  <section class="h1-cta-section" id="bookingCtaSection">
+    <div class="container">
+      <div class="cta-banner-card">
+        <div class="cta-content">
+          <div class="section-eyebrow" style="background: rgba(255,255,255,0.15); color: #FFFFFF; border-color: rgba(255,255,255,0.3);">
+            <i class="fas fa-fire"></i> WEEKEND PASSES NOW OPEN
+          </div>
+          <h2 class="cta-title">Ready for an Evening of Pure Laughter?</h2>
+          <p class="cta-desc">
+            Join hundreds of patrons who spend their Friday and Saturday nights with the country’s sharpest comedic minds. Tables fill quickly—book in advance.
+          </p>
+          <div class="cta-buttons-wrap">
+            <a href="tickets.html" class="btn btn-primary btn-lg">
+              <i class="fas fa-ticket"></i> Purchase Tickets
+            </a>
+            <a href="contact.html" class="btn btn-outline btn-lg" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);">
+              <i class="fas fa-phone"></i> VIP Reservation Desk
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Fast Booking Widget -->
+        <div class="cta-action-box">
+          <h4><i class="fas fa-envelope-open-text"></i> Join VIP Secret Lineup Alerts</h4>
+          <p style="font-size: 0.875rem; color: #E2E8F0;">Get 24h advance ticket access for celebrity drop-in surprise shows.</p>
+          <form class="cta-form">
+            <div class="cta-input-group">
+              <input type="email" class="cta-input" placeholder="Enter your email address" required aria-label="Email Address">
+              <button type="submit" class="btn btn-primary">Join Club</button>
+            </div>
+          </form>
+          <div class="cta-perks-row">
+            <span><i class="fas fa-check"></i> No spam ever</span>
+            <span><i class="fas fa-check"></i> Instant presale codes</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon">
+              <i class="fas fa-microphone-lines"></i>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">LAUGH VAULT</span>
+              <span class="brand-subtitle">COMEDY CLUB</span>
+            </div>
+          </a>
+          <p>The premier live comedy sanctuary located in the heart of Downtown. Celebrating stand-up culture, sharp writing, and vibrant nightlife since 2014.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="shows.html">Full Show Calendar</a></li>
+            <li><a href="tickets.html">Tickets &amp; Seating</a></li>
+            <li><a href="vip.html">VIP Memberships</a></li>
+            <li><a href="rentals.html">Private Venue Rentals</a></li>
+          </ul>
+        </div>
+
+        <!-- Club Info -->
+        <div class="footer-col">
+          <h4>Venue &amp; Hours</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">442 Velvet Blvd, Downtown</a></li>
+            <li><span>Wed - Sun: 6:00 PM – 2:00 AM</span></li>
+            <li><span>Box Office: (555) 843-6421</span></li>
+            <li><a href="contact.html">Dress Code &amp; Club FAQ</a></li>
+            <li><a href="dashboard.html">Patron Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <p style="font-size: 0.875rem; margin-bottom: 1rem;">Subscribe for weekly headliner announcements and 15% off first tickets.</p>
+          <form class="cta-form">
+            <div class="cta-input-group">
+              <input type="email" class="cta-input" placeholder="Your email..." required aria-label="Newsletter Email">
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Laugh Vault Comedy Club. All rights reserved. 21+ Venue Policy.</p>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Ticket Policies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button class="scroll-top-btn" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Interactive JavaScript Engine -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

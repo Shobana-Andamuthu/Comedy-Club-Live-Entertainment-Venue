@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="lv-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7C3AED" />
+      <stop offset="100%" stop-color="#FF4D6D" />
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#lv-grad)" />
+  <g fill="#FFFFFF" transform="translate(14, 12)">
+    <!-- Microphone head -->
+    <rect x="11" y="4" width="14" height="22" rx="7" fill="#FFFFFF" />
+    <!-- Microphone cradle -->
+    <path d="M4 17 C4 27, 32 27, 32 17" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" />
+    <!-- Stand stem -->
+    <line x1="18" y1="27" x2="18" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" />
+    <!-- Stand base -->
+    <line x1="10" y1="34" x2="26" y2="34" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+</svg>

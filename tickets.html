@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tickets &amp; Seating — The Laugh Vault Comedy Club</title>
+  <meta name="description" content="Reserve tickets for live stand-up comedy shows, VIP booth experiences, and season passes at The Laugh Vault.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="loader-icon-wrap">
+        <div class="loader-mic-icon">
+          <i class="fas fa-microphone-lines"></i>
+        </div>
+        <div class="loader-pulse-ring"></div>
+        <div class="loader-pulse-ring delay"></div>
+      </div>
+      <div class="loader-brand-title">THE LAUGH VAULT</div>
+      <div class="loader-brand-subtitle">LIVE ENTERTAINMENT &amp; COMEDY</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon"><i class="fas fa-microphone-lines"></i></div>
+          <div class="brand-text">
+            <span class="brand-title">LAUGH VAULT</span>
+            <span class="brand-subtitle">COMEDY CLUB</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link">
+              Home <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="home-2.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="shows.html" class="nav-link">Shows</a></li>
+          <li class="nav-item"><a href="tickets.html" class="nav-link active">Tickets</a></li>
+          <li class="nav-item"><a href="vip.html" class="nav-link">VIP</a></li>
+          <li class="nav-item"><a href="rentals.html" class="nav-link">Rentals</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="control-btn theme-toggle-btn" aria-label="Toggle Theme Mode"><i class="fas fa-moon"></i></button>
+          <button class="control-btn rtl-toggle-btn" aria-label="Toggle Text Direction">RTL</button>
+          <a href="login.html" class="btn btn-primary btn-sm desktop-only-btn"><i class="fas fa-arrow-right-to-bracket"></i> Login</a>
+          <button class="hamburger-btn" aria-label="Toggle Navigation Menu"><span></span><span></span><span></span></button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mobile-nav-drawer">
+      <ul class="mobile-nav-links">
+        <li>
+          <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+            <span>Home</span><i class="fas fa-chevron-down dropdown-icon"></i>
+          </a>
+          <ul class="mobile-submenu">
+            <li><a href="index.html" class="mobile-submenu-link">Home 1</a></li>
+            <li><a href="home-2.html" class="mobile-submenu-link">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="shows.html" class="mobile-nav-link">Shows</a></li>
+        <li><a href="tickets.html" class="mobile-nav-link active">Tickets</a></li>
+        <li><a href="vip.html" class="mobile-nav-link">VIP</a></li>
+        <li><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+      <div class="mobile-drawer-bottom">
+        <a href="login.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-arrow-right-to-bracket"></i> Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1: INNER HERO
+       ========================================================================== -->
+  <section class="inner-hero-section">
+    <div class="inner-hero-bg-wrapper">
+      <img src="assets/images/tickets/hero_tickets.jpg" alt="Showroom seating at The Velvet Mic" class="inner-hero-bg">
+      <div class="inner-hero-overlay"></div>
+    </div>
+    <div class="inner-hero-content">
+      <div class="section-eyebrow"><i class="fas fa-ticket-simple"></i> ADMISSION TIERS</div>
+      <h1 class="inner-hero-title">Tickets &amp; Seating Options</h1>
+      <p class="inner-hero-desc">Choose from general club seating, front-row reserved tables, or luxury VIP leather booths.</p>
+      <div class="breadcrumb-trail">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+        <span>Tickets</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: PRICING TIERS & PACKAGES
+       ========================================================================== -->
+  <section style="background: var(--color-surface-soft);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow eyebrow-coral"><i class="fas fa-tags"></i> TICKET TIERS</div>
+        <h2 class="section-title">Select Your Nightclub Experience</h2>
+        <p class="section-desc">Transparent pricing with zero hidden processing surcharges. All tiers include full stage views.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Tier 1: GA -->
+        <div class="pricing-card">
+          <div style="width: 100%; height: 165px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.25rem; background: #0E1322;">
+            <img src="assets/images/tickets/tier_ga.jpg" alt="General Admission Seating" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="pricing-header">
+            <span class="badge badge-teal">STANDARD</span>
+            <h3 style="margin-top: 0.65rem; font-size: 1.25rem;">General Admission</h3>
+            <div class="pricing-price">$25 <span>/ seat</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> First-come showroom seating</li>
+            <li><i class="fas fa-check-circle"></i> Full cocktail &amp; craft bar service</li>
+            <li><i class="fas fa-check-circle"></i> 2-item minimum applies</li>
+            <li><i class="fas fa-check-circle"></i> Digital e-ticket sent instantly</li>
+          </ul>
+          <a href="shows.html" class="btn btn-outline btn-md" style="width: 100%; margin-top: auto;">Book General</a>
+        </div>
+
+        <!-- Tier 2: Reserved Table -->
+        <div class="pricing-card">
+          <div style="width: 100%; height: 165px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.25rem; background: #0E1322;">
+            <img src="assets/images/tickets/tier_table.jpg" alt="Reserved Stage Table" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="pricing-header">
+            <span class="badge badge-violet">POPULAR</span>
+            <h3 style="margin-top: 0.65rem; font-size: 1.25rem;">Reserved Table</h3>
+            <div class="pricing-price">$45 <span>/ seat</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> Guaranteed first 3 rows table</li>
+            <li><i class="fas fa-check-circle"></i> Dedicated cocktail server</li>
+            <li><i class="fas fa-check-circle"></i> Priority entrance queue</li>
+            <li><i class="fas fa-check-circle"></i> Complimentary snack basket</li>
+          </ul>
+          <a href="shows.html" class="btn btn-outline btn-md" style="width: 100%; margin-top: auto;">Reserve Table</a>
+        </div>
+
+        <!-- Tier 3: VIP Booth (Featured) -->
+        <div class="pricing-card featured-tier">
+          <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--color-accent); color: #fff; padding: 4px 16px; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; z-index: 2;">
+            BEST VALUE
+          </div>
+          <div style="width: 100%; height: 165px; border-radius: var(--radius-md); overflow: hidden; margin-bottom: 1.25rem; background: #0E1322;">
+            <img src="assets/images/tickets/tier_booth.jpg" alt="VIP Leather Booth" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div class="pricing-header">
+            <span class="badge badge-coral">PREMIUM VIP</span>
+            <h3 style="margin-top: 0.65rem; font-size: 1.25rem;">VIP Leather Booth</h3>
+            <div class="pricing-price">$75 <span>/ seat</span></div>
+          </div>
+          <ul class="pricing-features">
+            <li><i class="fas fa-check-circle"></i> Elevated velvet booth for 4-6</li>
+            <li><i class="fas fa-check-circle"></i> Bottle service &amp; table attendant</li>
+            <li><i class="fas fa-check-circle"></i> Skip-the-line VIP entry</li>
+            <li><i class="fas fa-check-circle"></i> Post-show comic meet opportunity</li>
+          </ul>
+          <a href="vip.html" class="btn btn-primary btn-md" style="width: 100%; margin-top: auto;">Get VIP Booth</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: INTERACTIVE SEATING & STAGE SIGHTLINES
+       ========================================================================== -->
+  <section>
+    <div class="container">
+      <div class="split-layout">
+        <div class="split-media">
+          <img src="assets/images/tickets/stage_view.jpg" alt="Direct stage sightline from Velvet Mic tables" class="split-img">
+        </div>
+        <div class="split-content">
+          <div class="section-eyebrow eyebrow-violet"><i class="fas fa-binoculars"></i> SIGHTLINES &amp; SOUND</div>
+          <h2 class="section-title">Every Seat Puts You in the Punchline</h2>
+          <p style="color: var(--color-text-muted); font-size: 1.0625rem; line-height: 1.7; margin-bottom: 1.5rem;">
+            Built with custom acoustics and tiered amphitheater-style floor rises, The Velvet Mic ensures zero obstructed views. Our furthest seat is only 38 feet from the spotlight.
+          </p>
+
+          <div class="ticket-stats-grid">
+            <div class="ticket-stat-box">
+              <div class="ticket-stat-num text-accent">320</div>
+              <div class="ticket-stat-title">Total Capacity</div>
+              <p class="ticket-stat-desc">Intimate room energy with stadium sound.</p>
+            </div>
+            <div class="ticket-stat-box">
+              <div class="ticket-stat-num text-teal">100%</div>
+              <div class="ticket-stat-title">Guarantee</div>
+              <p class="ticket-stat-desc">Zero pillars, zero blocked vantage points.</p>
+            </div>
+          </div>
+
+          <a href="shows.html" class="btn btn-primary btn-md"><i class="fas fa-calendar-check"></i> Choose Show Date</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: TICKET POLICIES & VENUE GUIDELINES FAQ
+       ========================================================================== -->
+  <section style="background: var(--color-surface-soft);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow eyebrow-amber"><i class="fas fa-circle-question"></i> FREQUENTLY ASKED QUESTIONS</div>
+        <h2 class="section-title">Ticketing &amp; House Guidelines</h2>
+        <p class="section-desc">Key details to help prepare for an unforgettable night of live stand-up comedy.</p>
+      </div>
+
+      <div class="faq-container">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>What is the 2-item minimum purchase policy?</span>
+            <i class="fas fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Like premier comedy venues worldwide, all ticketed admissions require a two-item food or beverage minimum purchase per guest inside the showroom. We offer an extensive selection of signature craft cocktails, premium wine, zero-proof mocktails, and artisanal shareable bites.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Are shows age-restricted?</span>
+            <i class="fas fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Unless specifically noted as an All-Ages Family Matinee, all regular evening shows are strictly 21+ with valid government-issued photo ID required at the door. No exceptions are granted for underage patrons during adult headline shows.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>When should our party arrive at the venue?</span>
+            <i class="fas fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Doors open 60 minutes prior to the scheduled showtime. For General Admission ticket holders, we recommend arriving at least 30-45 minutes before curtain to secure your preferred seats and place your initial drink order before lights dim.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            <span>Can I exchange or refund my tickets?</span>
+            <i class="fas fa-chevron-down faq-chevron"></i>
+          </button>
+          <div class="faq-answer">
+            <p>Tickets are non-refundable once purchased. However, if you notify our box office at least 24 hours prior to the show, we can transfer your credit toward any future performance within 60 days of the original date.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: GROUP BOOKING & CORPORATE BANNER CTA
+       ========================================================================== -->
+  <section class="marquee-cta-section">
+    <div class="marquee-cta-bg">
+      <img src="assets/images/home2/cta_marquee.jpg" alt="Velvet Mic Nightlife" class="marquee-bg-img">
+      <div class="marquee-cta-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="marquee-cta-content">
+        <div class="section-eyebrow eyebrow-coral"><i class="fas fa-users"></i> GROUP EXPERIENCES</div>
+        <h2 class="marquee-cta-title">Planning a Party of 10 or More?</h2>
+        <p class="marquee-cta-desc">
+          Enjoy dedicated VIP table clusters, customized drink packages, and personalized comic roast shoutouts for your birthday, bachelor party, or corporate outing.
+        </p>
+        <div class="marquee-cta-actions">
+          <a href="rentals.html" class="btn btn-primary btn-lg"><i class="fas fa-champagne-glasses"></i> Book Group Package</a>
+          <a href="contact.html" class="btn btn-outline btn-lg" style="color: #fff; border-color: rgba(255,255,255,0.4);"><i class="fas fa-phone"></i> Call Box Office</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <div class="logo-icon"><i class="fas fa-microphone-lines"></i></div>
+            <div class="brand-text">
+              <span class="brand-title">LAUGH VAULT</span>
+              <span class="brand-subtitle">COMEDY CLUB</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            The city's preeminent comedy stage and craft cocktail lounge. Delivering unforgettable laughs, touring headliners, and signature drinks 6 nights a week.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="shows.html">Show Calendar</a></li>
+            <li><a href="tickets.html">Tickets &amp; Pricing</a></li>
+            <li><a href="vip.html">VIP Memberships</a></li>
+            <li><a href="rentals.html">Venue Rentals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Club Information</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About The Laugh Vault</a></li>
+            <li><a href="contact.html">Box Office &amp; Directions</a></li>
+            <li><a href="dashboard.html">Patron Dashboard</a></li>
+            <li><a href="login.html">Account Login</a></li>
+            <li><a href="register.html">Sign Up for Passes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Box Office &amp; Hours</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fas fa-location-dot"></i> 442 Speakeasy Row, Theater Arts District, Downtown</li>
+            <li><i class="fas fa-phone"></i> (555) 843-8358</li>
+            <li><i class="fas fa-envelope"></i> boxoffice@laughvault.com</li>
+            <li><i class="fas fa-clock"></i> Tue – Sun: 5:00 PM – 2:00 AM (Closed Mon)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Laugh Vault Comedy Club &amp; Live Lounge. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Admission</a>
+          <a href="#">House Rules</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

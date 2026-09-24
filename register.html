@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Patron Account — The Laugh Vault Comedy Club</title>
+  <meta name="description" content="Sign up for a Laugh Vault account to unlock ticket presales, loyalty cocktail rewards, and VIP lounge access.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="loader-icon-wrap">
+        <div class="loader-mic-icon">
+          <i class="fas fa-microphone-lines"></i>
+        </div>
+        <div class="loader-pulse-ring"></div>
+        <div class="loader-pulse-ring delay"></div>
+      </div>
+      <div class="loader-brand-title">THE LAUGH VAULT</div>
+      <div class="loader-brand-subtitle">LIVE ENTERTAINMENT &amp; COMEDY</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       AUTH SPLIT CONTAINER
+       ========================================================================== -->
+  <main class="auth-wrapper">
+    <!-- Visual Left Pane -->
+    <div class="auth-visual-pane">
+      <img src="assets/images/auth/auth_register_stage.jpg" alt="Velvet Mic Nightlife" class="auth-visual-bg">
+      <div class="auth-visual-overlay"></div>
+      <div class="auth-visual-content">
+        <div class="section-eyebrow eyebrow-teal"><i class="fas fa-sparkles"></i> JOIN THE INNER CIRCLE</div>
+        <h2 style="font-size: 2.25rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; color: #FFFFFF;">
+          Unlock Exclusive Comedy Nights &amp; Perks
+        </h2>
+        <p style="color: rgba(255, 255, 255, 0.8); font-size: 1rem; line-height: 1.6; margin-bottom: 1.5rem;">
+          Sign up today to receive instant member ticket discounts, early notifications for national tour announcements, and birthday show credits.
+        </p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1.25rem;">
+          <li style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: #FFFFFF;">
+            <i class="fas fa-check" style="color: var(--color-accent-teal);"></i> 48-hour headliner presale notifications
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: #FFFFFF;">
+            <i class="fas fa-check" style="color: var(--color-accent-teal);"></i> Fast-track QR entry on mobile
+          </li>
+          <li style="display: flex; align-items: center; gap: 0.75rem; font-size: 0.9375rem; color: #FFFFFF;">
+            <i class="fas fa-check" style="color: var(--color-accent-teal);"></i> 10% discount on initial table booking
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Form Right Pane -->
+    <div class="auth-form-pane">
+      <div class="auth-form-box" style="max-width: 520px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
+          <a href="index.html" class="brand-logo" style="text-decoration: none;">
+            <div class="logo-icon"><i class="fas fa-microphone-lines"></i></div>
+            <div class="brand-text">
+              <span class="brand-title">LAUGH VAULT</span>
+              <span class="brand-subtitle">COMEDY CLUB</span>
+            </div>
+          </a>
+          <div style="display: flex; gap: 0.5rem; align-items: center;">
+            <button class="control-btn theme-toggle-btn" aria-label="Toggle Theme Mode"><i class="fas fa-moon"></i></button>
+            <button class="control-btn rtl-toggle-btn" aria-label="Toggle Text Direction">RTL</button>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 1.75rem;">
+          <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">Create Your Account</h1>
+          <p style="color: var(--color-text-muted); font-size: 0.9375rem;">
+            Join thousands of comedy lovers and start booking tonight.
+          </p>
+        </div>
+
+        <form id="registerForm" action="dashboard.html" method="GET">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="regFirstName">First Name</label>
+              <input type="text" id="regFirstName" class="form-control" placeholder="e.g. Alex" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="regLastName">Last Name</label>
+              <input type="text" id="regLastName" class="form-control" placeholder="e.g. Morgan" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="regEmail">Email Address</label>
+              <input type="email" id="regEmail" class="form-control" placeholder="alex@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="regPhone">Phone Number</label>
+              <input type="tel" id="regPhone" class="form-control" placeholder="(555) 000-0000" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regTier">Account Type / Membership Tier</label>
+            <select id="regTier" class="form-control">
+              <option value="standard">Standard Patron (Free)</option>
+              <option value="gold">Gold Velvet Member ($89/mo)</option>
+              <option value="obsidian">Obsidian VIP Circle ($199/mo)</option>
+              <option value="founder">Founder's Key ($399/mo)</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="regPassword">Create Password</label>
+              <div class="password-input-wrap">
+                <input type="password" id="regPassword" class="form-control" placeholder="••••••••" required>
+                <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="regConfirm">Confirm Password</label>
+              <div class="password-input-wrap">
+                <input type="password" id="regConfirm" class="form-control" placeholder="••••••••" required>
+                <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; align-items: flex-start; gap: 0.5rem; margin-bottom: 1.5rem;">
+            <input type="checkbox" id="termsAgree" required style="accent-color: var(--color-accent); width: 16px; height: 16px; margin-top: 3px; cursor: pointer;">
+            <label for="termsAgree" style="font-size: 0.8125rem; color: var(--color-text-muted); cursor: pointer; line-height: 1.4;">
+              I agree to the <a href="#" style="color: var(--color-accent); font-weight: 600;">Terms of Admission</a> and <a href="#" style="color: var(--color-accent); font-weight: 600;">Privacy Policy</a>, and verify that I am 21 years of age or older.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-md" style="width: 100%; margin-bottom: 1.5rem;">
+            <i class="fas fa-user-plus"></i> Complete Registration
+          </button>
+
+          <p style="text-align: center; font-size: 0.875rem; color: var(--color-text-muted);">
+            Already have an account? <a href="login.html" style="color: var(--color-accent); font-weight: 700;">Sign in here</a>
+          </p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

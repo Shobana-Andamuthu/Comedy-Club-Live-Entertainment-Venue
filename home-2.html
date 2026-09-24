@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Laugh Vault — Immersive Stand-Up Stage &amp; Live Lounge</title>
+  <meta name="description" content="Immerse yourself in live stand-up comedy, roast battles, and exclusive cellar sessions at The Laugh Vault.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="loader-icon-wrap">
+        <div class="loader-mic-icon">
+          <i class="fas fa-microphone-lines"></i>
+        </div>
+        <div class="loader-pulse-ring"></div>
+        <div class="loader-pulse-ring delay"></div>
+      </div>
+      <div class="loader-brand-title">THE LAUGH VAULT</div>
+      <div class="loader-brand-subtitle">LIVE ENTERTAINMENT &amp; COMEDY</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" id="mainBrandLogo">
+          <div class="logo-icon">
+            <i class="fas fa-microphone-lines"></i>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">LAUGH VAULT</span>
+            <span class="brand-subtitle">COMEDY CLUB</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <ul class="nav-menu" id="desktopNavMenu">
+          <li class="nav-item dropdown">
+            <a href="home-2.html" class="nav-link active" id="navHomeDropdown" aria-haspopup="true">
+              Home <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="index.html" class="dropdown-link">Home 1</a>
+              </li>
+              <li>
+                <a href="home-2.html" class="dropdown-link active">Home 2</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="shows.html" class="nav-link" id="navShowsLink">Shows</a>
+          </li>
+          <li class="nav-item">
+            <a href="tickets.html" class="nav-link" id="navTicketsLink">Tickets</a>
+          </li>
+          <li class="nav-item">
+            <a href="vip.html" class="nav-link" id="navVipLink">VIP</a>
+          </li>
+          <li class="nav-item">
+            <a href="rentals.html" class="nav-link" id="navRentalsLink">Rentals</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link" id="navAboutLink">About</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link" id="navContactLink">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link" id="navDashboardLink">Dashboard</a>
+          </li>
+        </ul>
+
+        <!-- Right Side Nav Actions -->
+        <div class="nav-actions">
+          <!-- Theme Toggle -->
+          <button class="control-btn theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme Mode" title="Toggle Theme">
+            <i class="fas fa-moon"></i>
+          </button>
+
+          <!-- RTL Toggle -->
+          <button class="control-btn rtl-toggle-btn" id="rtlToggleBtn" aria-label="Toggle Text Direction" title="Toggle RTL/LTR">
+            RTL
+          </button>
+
+          <!-- Login Button -->
+          <a href="login.html" class="btn btn-primary btn-sm desktop-only-btn" id="navLoginBtn">
+            <i class="fas fa-arrow-right-to-bracket"></i> Login
+          </a>
+
+          <!-- Hamburger Button for Mobile / Tablet -->
+          <button class="hamburger-btn" id="mobileHamburgerBtn" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <ul class="mobile-nav-links">
+        <li>
+          <a href="#" class="mobile-nav-link mobile-dropdown-toggle active">
+            <span>Home</span>
+            <i class="fas fa-chevron-down dropdown-icon"></i>
+          </a>
+          <ul class="mobile-submenu">
+            <li><a href="index.html" class="mobile-submenu-link">Home 1</a></li>
+            <li><a href="home-2.html" class="mobile-submenu-link active">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="shows.html" class="mobile-nav-link">Shows</a></li>
+        <li><a href="tickets.html" class="mobile-nav-link">Tickets</a></li>
+        <li><a href="vip.html" class="mobile-nav-link">VIP</a></li>
+        <li><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+
+      <div class="mobile-drawer-bottom">
+        <a href="login.html" class="btn btn-primary" style="width: 100%;">
+          <i class="fas fa-arrow-right-to-bracket"></i> Login
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1: IMMERSIVE STAGE HERO (Full Photographic Backdrop & Broadcast Ticker)
+       ========================================================================== -->
+  <section class="h2-hero-section" id="stageHeroSection">
+    <div class="h2-hero-bg-wrapper">
+      <img src="assets/images/hero/home2_hero.jpg" alt="Immersive comedy stage lighting with audience" class="h2-hero-bg">
+      <div class="h2-hero-overlay"></div>
+    </div>
+    <div class="container h2-hero-container">
+      <div class="h2-hero-eyebrow">
+        <i class="fas fa-tower-broadcast"></i> LIVE BROADCAST &amp; NIGHTLY STAGE
+      </div>
+      <h1 class="h2-hero-title">Step Into The Spotlight of Stand-Up Excellence.</h1>
+      <p class="h2-hero-desc">
+        A sanctuary for pure comedic craft. Uncut punchlines, raw energy, and intimate front-row tables where anything can happen.
+      </p>
+
+      <div class="h2-hero-actions">
+        <a href="tickets.html" class="btn btn-primary btn-lg">
+          <i class="fas fa-couch"></i> Reserve Tonight's Table
+        </a>
+        <a href="vip.html" class="btn btn-secondary btn-lg">
+          <i class="fas fa-crown"></i> Join The Laugh Society
+        </a>
+      </div>
+
+      <!-- Live Ticker Bar -->
+      <div class="h2-live-ticker">
+        <i class="fas fa-radio"></i>
+        <span><strong>NOW PLAYING:</strong> Friday Midnight Improv • 11:15 PM • 12 Seats</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: INTERACTIVE SHOW CATEGORIES (4 Distinct Comedy Styles - Real Photos)
+       ========================================================================== -->
+  <section class="h2-categories-section" id="categoriesSection">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <i class="fas fa-sliders"></i> CHOOSE YOUR LAUGH
+        </div>
+        <h2 class="section-title">Explore Comedy Formats</h2>
+        <p class="section-desc">From brutal roast showdowns to melodic punchlines, find your signature flavor of live entertainment.</p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- Category 1 -->
+        <a href="shows.html" class="category-card">
+          <div class="category-icon-box">
+            <img src="assets/images/home2/category_standup.jpg" alt="Stand-Up Specials Photography">
+          </div>
+          <h3 class="category-title">Stand-Up Specials</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1rem;">Full length solo headliner sets from top national comedians.</p>
+          <span class="category-count">12 Shows This Month &rarr;</span>
+        </a>
+
+        <!-- Category 2 -->
+        <a href="shows.html" class="category-card">
+          <div class="category-icon-box">
+            <img src="assets/images/home2/category_roast.jpg" alt="Roast Battles Photography">
+          </div>
+          <h3 class="category-title">Roast Battles</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1rem;">Brutal punchlines, quick comeback duels, and judge elimination.</p>
+          <span class="category-count">Every Thursday &rarr;</span>
+        </a>
+
+        <!-- Category 3 -->
+        <a href="shows.html" class="category-card">
+          <div class="category-icon-box">
+            <img src="assets/images/home2/category_musical.jpg" alt="Musical Comedy Photography">
+          </div>
+          <h3 class="category-title">Musical Comedy</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1rem;">Satirical songs, improvised tracks, and guitar-wielding comics.</p>
+          <span class="category-count">Bi-Weekly Saturdays &rarr;</span>
+        </a>
+
+        <!-- Category 4 -->
+        <a href="shows.html" class="category-card">
+          <div class="category-icon-box">
+            <img src="assets/images/home2/category_openmic.jpg" alt="Open Mic Nights Photography">
+          </div>
+          <h3 class="category-title">Late Night Open Mic</h3>
+          <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1rem;">Unfiltered workshop stage for rising stars and drop-in pros.</p>
+          <span class="category-count">Free Entry with Drink &rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: FEATURED COMEDY NIGHTS (Large Editorial Feature Layout - Real Photos)
+       ========================================================================== -->
+  <section class="h2-featured-section" id="featuredNightsSection">
+    <div class="container">
+      <div class="section-header text-start">
+        <div class="section-eyebrow eyebrow-violet">
+          <i class="fas fa-star-sharp"></i> CURATED EXPERIENCES
+        </div>
+        <h2 class="section-title">Signature Nightly Residencies</h2>
+        <p class="section-desc">Our flagship recurring productions that draw patrons from across the country.</p>
+      </div>
+
+      <div class="featured-nights-layout">
+        <!-- Big Primary Feature -->
+        <div class="featured-big-card">
+          <img src="assets/images/home2/featured_gala.jpg" alt="Saturday Primetime Gala Spectacular">
+          <div class="featured-card-overlay">
+            <span class="badge badge-coral" style="margin-bottom: 0.5rem;">FLAGSHIP SATURDAY</span>
+            <h3 class="featured-card-title" style="font-size: 1.35rem; font-weight: 800; margin-bottom: 0.4rem; color: #FFFFFF;">Saturday Primetime Gala</h3>
+            <p style="color: #CBD5E1; font-size: 0.8125rem; line-height: 1.5; margin-bottom: 0.85rem; max-width: 480px;">
+              5 heavyweight headliners back-to-back in one unforgettable showcase with champagne toast.
+            </p>
+            <div class="featured-action-row">
+              <a href="tickets.html" class="btn btn-primary btn-sm">Book Prime Table ($45)</a>
+              <span class="featured-showtime">Doors 8:00 PM • Showtime 9:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Side Stack Features -->
+        <div class="featured-side-stack">
+          <!-- Mini Feature 1 -->
+          <div class="featured-mini-card">
+            <img src="assets/images/home2/featured_speakeasy.jpg" alt="Secret Speakeasy Cellar Vault Jam">
+            <div class="featured-card-overlay">
+              <span class="badge badge-violet" style="margin-bottom: 0.5rem;">SECRET SESSIONS</span>
+              <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: #FFFFFF;">Cellar Vault Jam</h4>
+              <p style="color: #CBD5E1; font-size: 0.8125rem; margin-bottom: 1rem;">No phones allowed. Raw, experimental comedy sets with surprise A-list guests.</p>
+              <a href="tickets.html" class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">Reserve Vault Access</a>
+            </div>
+          </div>
+
+          <!-- Mini Feature 2 -->
+          <div class="featured-mini-card">
+            <img src="assets/images/home2/featured_brunch.jpg" alt="Sunday Hangover Boozy Brunch and Roasts">
+            <div class="featured-card-overlay">
+              <span class="badge badge-gold" style="margin-bottom: 0.5rem;">DAYTIME ROASTS</span>
+              <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: #FFFFFF;">Boozy Brunch &amp; Roasts</h4>
+              <p style="color: #CBD5E1; font-size: 0.8125rem; margin-bottom: 1rem;">Bottomless mimosas, artisanal brunch bites, and hilariously savage morning commentary.</p>
+              <a href="tickets.html" class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.3);">Book Brunch Pass</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: AUDIENCE & VENUE EXPERIENCE (3-Column Visual Moments - Real Photos)
+       ========================================================================== -->
+  <section class="h2-moments-section" id="venueMomentsSection">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow">
+          <i class="fas fa-camera-retro"></i> ATMOSPHERE &amp; HOSPITALITY
+        </div>
+        <h2 class="section-title">Immerse in the Velvet Vibe</h2>
+        <p class="section-desc">A look inside the booths, the lounge, and the high-spirited energy that makes every night historic.</p>
+      </div>
+
+      <div class="moments-grid">
+        <!-- Moment 1 -->
+        <div class="moment-card">
+          <div class="moment-img">
+            <img src="assets/images/home2/vip_booth.jpg" alt="VIP Booths and Table Service at The Velvet Mic">
+          </div>
+          <div class="moment-body">
+            <h4>Private Velvet Booths</h4>
+            <p>Elevated booth seating with dedicated cocktail servers and optimal acoustic sightlines.</p>
+          </div>
+        </div>
+
+        <!-- Moment 2 -->
+        <div class="moment-card">
+          <div class="moment-img">
+            <img src="assets/images/home2/friends_laughing.jpg" alt="Laughing friends enjoying live comedy show">
+          </div>
+          <div class="moment-body">
+            <h4>Shared Table Energy</h4>
+            <p>Unmatched communal laughter in a vibrant, candlelit room packed with fellow comedy lovers.</p>
+          </div>
+        </div>
+
+        <!-- Moment 3 -->
+        <div class="moment-card">
+          <div class="moment-img">
+            <img src="assets/images/home2/green_room.jpg" alt="Backstage Vintage Green Room">
+          </div>
+          <div class="moment-body">
+            <h4>Backstage Green Room</h4>
+            <p>Historic green room walls signed by the legendary comedians who have graced our stage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: VIP SOCIETY / MARQUEE FINAL CTA (Real Photo Background)
+       ========================================================================== -->
+  <section class="h2-vip-cta-section" id="laughSocietySection">
+    <div class="container">
+      <div class="marquee-card">
+        <img src="assets/images/home2/cta_marquee.jpg" alt="VIP Laugh Society Luxury Theater" class="marquee-bg-img">
+        <div class="marquee-overlay"></div>
+        <div class="marquee-content-wrap">
+          <div class="section-eyebrow" style="background: rgba(255,255,255,0.18); color: #FFFFFF; border-color: rgba(255,255,255,0.35); margin-bottom: 1.5rem;">
+            <i class="fas fa-crown"></i> PATRON MEMBERSHIP PASS
+          </div>
+          <h2>Join The Laugh Society</h2>
+          <p>Unlock guaranteed VIP table reservations, zero booking fees, invitations to secret rehearsals, and meet-and-greets with touring headliners.</p>
+          
+          <div class="marquee-btn-group">
+            <a href="vip.html" class="btn btn-primary btn-lg">
+              <i class="fas fa-gem"></i> Become a VIP Member ($29/mo)
+            </a>
+            <a href="rentals.html" class="btn btn-outline btn-lg" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);">
+              <i class="fas fa-building"></i> Host a Private Event
+            </a>
+          </div>
+
+          <div class="marquee-perks">
+            <span><i class="fas fa-check-circle"></i> Priority Ticket Presales</span>
+            <span><i class="fas fa-check-circle"></i> Complimentary Welcome Cocktails</span>
+            <span><i class="fas fa-check-circle"></i> Backstage Lounge Access</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GLOBAL FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Summary -->
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon">
+              <i class="fas fa-microphone-lines"></i>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">LAUGH VAULT</span>
+              <span class="brand-subtitle">COMEDY CLUB</span>
+            </div>
+          </a>
+          <p>The premier live comedy sanctuary located in the heart of Downtown. Celebrating stand-up culture, sharp writing, and vibrant nightlife since 2014.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-icon" aria-label="Spotify"><i class="fab fa-spotify"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="shows.html">Full Show Calendar</a></li>
+            <li><a href="tickets.html">Tickets &amp; Seating</a></li>
+            <li><a href="vip.html">VIP Memberships</a></li>
+            <li><a href="rentals.html">Private Venue Rentals</a></li>
+          </ul>
+        </div>
+
+        <!-- Club Info -->
+        <div class="footer-col">
+          <h4>Venue &amp; Hours</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html">442 Velvet Blvd, Downtown</a></li>
+            <li><span>Wed - Sun: 6:00 PM – 2:00 AM</span></li>
+            <li><span>Box Office: (555) 843-6421</span></li>
+            <li><a href="contact.html">Dress Code &amp; Club FAQ</a></li>
+            <li><a href="dashboard.html">Patron Portal</a></li>
+          </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="footer-col">
+          <h4>Stay Connected</h4>
+          <p style="font-size: 0.875rem; margin-bottom: 1rem;">Subscribe for weekly headliner announcements and 15% off first tickets.</p>
+          <form class="cta-form">
+            <div class="cta-input-group">
+              <input type="email" class="cta-input" placeholder="Your email..." required aria-label="Newsletter Email">
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Laugh Vault Comedy Club. All rights reserved. 21+ Venue Policy.</p>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Ticket Policies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top Button -->
+  <button class="scroll-top-btn" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Interactive JavaScript Engine -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

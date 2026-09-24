@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patron Dashboard — The Laugh Vault Comedy Club</title>
+  <meta name="description" content="View active e-tickets, manage VIP table reservations, and track loyalty cocktail rewards in your Laugh Vault dashboard.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="loader-icon-wrap">
+        <div class="loader-mic-icon">
+          <i class="fas fa-microphone-lines"></i>
+        </div>
+        <div class="loader-pulse-ring"></div>
+        <div class="loader-pulse-ring delay"></div>
+      </div>
+      <div class="loader-brand-title">THE LAUGH VAULT</div>
+      <div class="loader-brand-subtitle">LIVE ENTERTAINMENT &amp; COMEDY</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DASHBOARD APP HEADER (Clean, Direct Actions matching Reference 2)
+       ========================================================================== -->
+  <header class="site-header dashboard-header" id="siteHeader">
+    <div class="container dashboard-header-container">
+      <nav class="navbar dashboard-navbar" aria-label="Dashboard Navigation">
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon"><i class="fas fa-microphone-lines"></i></div>
+          <div class="brand-text">
+            <span class="brand-title">LAUGH VAULT</span>
+            <span class="brand-subtitle">COMEDY CLUB</span>
+          </div>
+        </a>
+
+        <!-- Right Side Dashboard Actions (Exact Reference Match) -->
+        <div class="nav-actions dashboard-actions">
+          <button class="control-btn theme-toggle-btn" aria-label="Toggle Theme Mode">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="control-btn rtl-toggle-btn" aria-label="Toggle Text Direction">
+            RTL
+          </button>
+          <a href="index.html" class="btn btn-outline btn-sm dashboard-back-btn">
+            <i class="fas fa-arrow-left"></i> <span>Back to Site</span>
+          </a>
+          <a href="login.html" class="btn btn-primary btn-sm dashboard-logout-btn">
+            <i class="fas fa-arrow-right-from-bracket"></i> <span>Log Out</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       DASHBOARD WRAPPER
+       ========================================================================== -->
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="dashboard-sidebar">
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">
+          <img src="assets/images/dashboard/patron_avatar.jpg" alt="Alex Morgan" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="sidebar-user-name">Alex Morgan</div>
+        <div class="sidebar-user-tier">OBSIDIAN VIP MEMBER</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="#overview" class="sidebar-nav-item active">
+          <i class="fas fa-table-cells-large"></i>
+          <span>Overview</span>
+        </a>
+        <a href="#tickets" class="sidebar-nav-item">
+          <i class="fas fa-ticket-simple"></i>
+          <span>My E-Tickets</span>
+        </a>
+        <a href="#reservations" class="sidebar-nav-item">
+          <i class="fas fa-calendar-check"></i>
+          <span>VIP Reservations</span>
+        </a>
+        <a href="#rewards" class="sidebar-nav-item">
+          <i class="fas fa-cocktail"></i>
+          <span>Bar Tab &amp; Credits</span>
+        </a>
+        <a href="#presales" class="sidebar-nav-item">
+          <i class="fas fa-bell"></i>
+          <span>Headliner Presales</span>
+        </a>
+        <a href="#settings" class="sidebar-nav-item">
+          <i class="fas fa-gear"></i>
+          <span>Settings</span>
+        </a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="dashboard-main">
+      <div class="dashboard-container">
+
+        <!-- ==========================================================================
+             TAB 1: OVERVIEW
+             ========================================================================== -->
+        <section class="dash-tab-content active" id="overviewSection" data-tab="overview">
+          <!-- Welcome Header -->
+          <div class="dash-page-header">
+            <div>
+              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">Welcome back, Alex</h1>
+              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Here is your upcoming show itinerary, digital tickets, and VIP membership status.</p>
+            </div>
+            <a href="shows.html" class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Reserve More Tickets</a>
+          </div>
+
+          <!-- Stat Cards -->
+          <div class="dash-stat-grid">
+            <div class="dash-stat-card">
+              <div class="dash-stat-val">04</div>
+              <div class="dash-stat-label">Active Tickets</div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-val" style="color: var(--color-accent-teal);">1,420</div>
+              <div class="dash-stat-label">Loyalty Club Points</div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-val" style="color: var(--color-accent-amber); font-size: 1.5rem;">Obsidian</div>
+              <div class="dash-stat-label">Current Tier</div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="dash-stat-val" style="color: var(--color-accent-violet); font-size: 1.5rem;">Oct 02</div>
+              <div class="dash-stat-label">Next Show Date</div>
+            </div>
+          </div>
+
+          <!-- Active Ticket Banner -->
+          <div class="feature-card" style="margin-bottom: 2rem; padding: 2rem; background: var(--color-surface); border: 2px solid var(--color-accent);">
+            <div style="display: grid; grid-template-columns: 220px 1fr auto; gap: 2rem; align-items: center;" class="e-ticket-card-responsive">
+              <div style="border-radius: var(--radius-md); overflow: hidden; height: 140px;">
+                <img src="assets/images/dashboard/ticket_preview.jpg" alt="Weekend Headliner Gala" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <span class="badge badge-coral" style="margin-bottom: 0.5rem;">NEXT UPCOMING SHOW</span>
+                <h2 style="font-size: 1.375rem; font-weight: 800; margin-bottom: 0.25rem;">Weekend Headliner Gala: Marcus Vance &amp; Guests</h2>
+                <div style="font-size: 0.875rem; color: var(--color-text-muted); display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                  <span style="display: inline-flex; align-items: center; gap: 0.45rem;"><i class="fas fa-calendar" style="color: var(--color-accent);"></i> Friday, Oct 02, 2026</span>
+                  <span style="display: inline-flex; align-items: center; gap: 0.45rem;"><i class="fas fa-clock" style="color: var(--color-accent);"></i> Doors 7:00 PM | Show 8:00 PM</span>
+                  <span style="display: inline-flex; align-items: center; gap: 0.45rem;"><i class="fas fa-chair" style="color: var(--color-accent);"></i> Booth B4 (4 Seats)</span>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem; min-width: 160px;">
+                <button class="btn btn-primary btn-sm" onclick="alert('Digital Pass Downloaded! Show QR code at the door.')">
+                  <i class="fas fa-qrcode"></i> View QR Pass
+                </button>
+                <button class="btn btn-outline btn-sm" onclick="alert('Calendar hold synced to your device.')">
+                  <i class="fas fa-calendar-plus"></i> Add to Calendar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Upcoming Bookings Table -->
+          <div class="dash-table-card">
+            <div style="padding: 1.5rem; border-bottom: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+              <h3 style="font-size: 1.1875rem; font-weight: 800;">Your Reserved Shows</h3>
+              <span style="font-size: 0.875rem; color: var(--color-text-muted);">Showing 3 reservations</span>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Event / Performance</th>
+                    <th>Date &amp; Time</th>
+                    <th>Seating Type</th>
+                    <th>Tickets</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Weekend Headliner Gala</strong></td>
+                    <td>Fri, Oct 02 • 8:00 PM</td>
+                    <td>VIP Leather Booth</td>
+                    <td>4 Guests</td>
+                    <td><span class="badge badge-teal">CONFIRMED</span></td>
+                    <td><a href="#tickets" onclick="document.querySelector('a[href=\'#tickets\']').click()" style="color: var(--color-accent); font-weight: 700; font-size: 0.875rem;">View Pass</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Late Night Roast Battle</strong></td>
+                    <td>Sat, Oct 10 • 10:30 PM</td>
+                    <td>Front Row Reserved</td>
+                    <td>2 Guests</td>
+                    <td><span class="badge badge-teal">CONFIRMED</span></td>
+                    <td><a href="#tickets" onclick="document.querySelector('a[href=\'#tickets\']').click()" style="color: var(--color-accent); font-weight: 700; font-size: 0.875rem;">View Pass</a></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sunday Stand-Up &amp; Sangria</strong></td>
+                    <td>Sun, Oct 18 • 6:30 PM</td>
+                    <td>General Admission</td>
+                    <td>2 Guests</td>
+                    <td><span class="badge badge-amber">PENDING BAR ADD-ON</span></td>
+                    <td><a href="#tickets" onclick="document.querySelector('a[href=\'#tickets\']').click()" style="color: var(--color-accent); font-weight: 700; font-size: 0.875rem;">View Pass</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================================================
+             TAB 2: MY E-TICKETS
+             ========================================================================== -->
+        <section class="dash-tab-content" id="ticketsSection" data-tab="tickets">
+          <div class="dash-page-header">
+            <div>
+              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">My E-Tickets &amp; Passes</h1>
+              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Access scannable digital passes, booth assignments, and mobile wallet passes.</p>
+            </div>
+            <a href="tickets.html" class="btn btn-primary btn-sm"><i class="fas fa-ticket"></i> Buy More Tickets</a>
+          </div>
+
+          <!-- Active Ticket List -->
+          <div class="dash-ticket-card">
+            <div style="display: grid; grid-template-columns: 180px 1fr auto; gap: 1.5rem; align-items: center;" class="e-ticket-card-responsive">
+              <div style="border-radius: var(--radius-md); overflow: hidden; height: 120px;">
+                <img src="assets/images/dashboard/ticket_preview.jpg" alt="Weekend Headliner Gala" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap;">
+                  <span class="badge badge-emerald">CONFIRMED &amp; ACTIVE</span>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted); font-family: monospace;">PASS #LV-2026-88941</span>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.35rem;">Weekend Headliner Gala: Marcus Vance &amp; Guests</h3>
+                <div class="ticket-meta-list">
+                  <div class="ticket-meta-row">
+                    <i class="fas fa-calendar-days"></i>
+                    <span>Fri, Oct 02, 2026 • Doors 7:00 PM | Show 8:00 PM</span>
+                  </div>
+                  <div class="ticket-meta-row">
+                    <i class="fas fa-chair"></i>
+                    <span>Booth B4 (4 Seats Reserved)</span>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem; min-width: 150px;">
+                <button class="btn btn-primary btn-sm" onclick="alert('Digital Pass QR Code #LV-2026-88941 is verified for admission!')">
+                  <i class="fas fa-qrcode"></i> View QR Code
+                </button>
+                <button class="btn btn-outline btn-sm" onclick="alert('Apple/Google Wallet Pass generated and sent to alex.morgan@example.com.')">
+                  <i class="fas fa-download"></i> Save to Wallet
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-ticket-card">
+            <div style="display: grid; grid-template-columns: 180px 1fr auto; gap: 1.5rem; align-items: center;" class="e-ticket-card-responsive">
+              <div style="border-radius: var(--radius-md); overflow: hidden; height: 120px;">
+                <img src="assets/images/shows/roast_1.jpg" alt="Late Night Roast Battle" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap;">
+                  <span class="badge badge-emerald">CONFIRMED &amp; ACTIVE</span>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted); font-family: monospace;">PASS #LV-2026-90412</span>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.35rem;">Late Night Roast Battle Championship</h3>
+                <div class="ticket-meta-list">
+                  <div class="ticket-meta-row">
+                    <i class="fas fa-calendar-days"></i>
+                    <span>Sat, Oct 10, 2026 • Doors 10:00 PM | Show 10:30 PM</span>
+                  </div>
+                  <div class="ticket-meta-row">
+                    <i class="fas fa-chair"></i>
+                    <span>Front Row Table A2 (2 Seats Reserved)</span>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem; min-width: 150px;">
+                <button class="btn btn-primary btn-sm" onclick="alert('Digital Pass QR Code #LV-2026-90412 is verified for admission!')">
+                  <i class="fas fa-qrcode"></i> View QR Code
+                </button>
+                <button class="btn btn-outline btn-sm" onclick="alert('Apple/Google Wallet Pass generated and sent to alex.morgan@example.com.')">
+                  <i class="fas fa-download"></i> Save to Wallet
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-ticket-card">
+            <div style="display: grid; grid-template-columns: 180px 1fr auto; gap: 1.5rem; align-items: center;" class="e-ticket-card-responsive">
+              <div style="border-radius: var(--radius-md); overflow: hidden; height: 120px;">
+                <img src="assets/images/shows/standup_1.jpg" alt="Sunday Stand-Up &amp; Sangria" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap;">
+                  <span class="badge badge-amber">PENDING BAR UPGRADE</span>
+                  <span style="font-size: 0.75rem; color: var(--color-text-muted); font-family: monospace;">PASS #LV-2026-91823</span>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.35rem;">Sunday Stand-Up &amp; Sangria Soirée</h3>
+                <div class="ticket-meta-list">
+                  <div class="ticket-meta-row">
+                    <i class="fas fa-calendar-days"></i>
+                    <span>Sun, Oct 18, 2026 • Doors 5:45 PM | Show 6:30 PM</span>
+                  </div>
+                  <div class="ticket-meta-row">
+                    <i class="fas fa-chair"></i>
+                    <span>Main Floor Table C1 (2 Seats Reserved)</span>
+                  </div>
+                </div>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 0.5rem; min-width: 150px;">
+                <button class="btn btn-primary btn-sm" onclick="alert('Digital Pass QR Code #LV-2026-91823 is verified for admission!')">
+                  <i class="fas fa-qrcode"></i> View QR Code
+                </button>
+                <button class="btn btn-outline btn-sm" onclick="alert('Apple/Google Wallet Pass generated and sent to alex.morgan@example.com.')">
+                  <i class="fas fa-download"></i> Save to Wallet
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Past Show Attendance History -->
+          <div class="dash-table-card" style="margin-top: 2rem;">
+            <div style="padding: 1.5rem; border-bottom: 1px solid var(--color-border);">
+              <h3 style="font-size: 1.1875rem; font-weight: 800;">Past Attended Shows</h3>
+            </div>
+            <div style="overflow-x: auto;">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Past Show</th>
+                    <th>Date Attended</th>
+                    <th>Seating</th>
+                    <th>Receipt</th>
+                    <th>Rating</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Gotham Stand-Up Showcase</strong></td>
+                    <td>Sep 12, 2026</td>
+                    <td>Booth A1</td>
+                    <td><a href="#" onclick="alert('Official VAT Receipt PDF sent to your email.'); return false;" style="color: var(--color-accent); font-weight: 600;"><i class="fas fa-file-pdf"></i> Receipt</a></td>
+                    <td><span style="color: var(--color-accent-amber);"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Sarah Silverman Secret Drop-In</strong></td>
+                    <td>Aug 28, 2026</td>
+                    <td>VIP Front Stage</td>
+                    <td><a href="#" onclick="alert('Official VAT Receipt PDF sent to your email.'); return false;" style="color: var(--color-accent); font-weight: 600;"><i class="fas fa-file-pdf"></i> Receipt</a></td>
+                    <td><span style="color: var(--color-accent-amber);"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================================================
+             TAB 3: VIP RESERVATIONS
+             ========================================================================== -->
+        <section class="dash-tab-content" id="reservationsSection" data-tab="reservations">
+          <div class="dash-page-header">
+            <div>
+              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">VIP Lounge &amp; Booth Reservations</h1>
+              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Exclusive table privileges, dedicated host concierge, and bottle service perks.</p>
+            </div>
+            <a href="vip.html" class="btn btn-primary btn-sm"><i class="fas fa-crown"></i> VIP Membership Guide</a>
+          </div>
+
+          <!-- VIP Benefits Banner -->
+          <div class="feature-card" style="margin-bottom: 2rem; padding: 2rem; background: var(--color-surface); border: 2px solid var(--color-secondary);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+              <div>
+                <span class="badge badge-violet">MEMBERSHIP TIER</span>
+                <h2 style="font-size: 1.5rem; font-weight: 800; margin-top: 0.25rem;">Obsidian VIP Status • Active through Dec 2027</h2>
+              </div>
+              <span class="badge badge-emerald" style="font-size: 0.875rem; padding: 0.5rem 1rem;"><i class="fas fa-check-circle"></i> Concierge Active</span>
+            </div>
+            <div class="grid-3" style="margin-top: 1.5rem;">
+              <div style="background: var(--color-surface-soft); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                <div style="color: var(--color-secondary); font-size: 1.25rem; margin-bottom: 0.25rem;"><i class="fas fa-champagne-glasses"></i></div>
+                <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.25rem;">Complimentary Mixology</strong>
+                <p style="font-size: 0.8125rem; margin: 0;">1 Signature cocktail per guest on arrival.</p>
+              </div>
+              <div style="background: var(--color-surface-soft); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                <div style="color: var(--color-secondary); font-size: 1.25rem; margin-bottom: 0.25rem;"><i class="fas fa-user-tie"></i></div>
+                <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.25rem;">Dedicated VIP Host</strong>
+                <p style="font-size: 0.8125rem; margin: 0;">Marcus D. assigned as your private host.</p>
+              </div>
+              <div style="background: var(--color-surface-soft); padding: 1rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                <div style="color: var(--color-secondary); font-size: 1.25rem; margin-bottom: 0.25rem;"><i class="fas fa-bolt"></i></div>
+                <strong style="display: block; font-size: 0.9375rem; margin-bottom: 0.25rem;">Zero Booking Surcharges</strong>
+                <p style="font-size: 0.8125rem; margin: 0;">100% waived ticketing and service fees.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Concierge Request Box -->
+          <div class="feature-card" style="padding: 2rem; background: var(--color-surface); border: 1px solid var(--color-border);">
+            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem;"><i class="fas fa-concierge-bell" style="color: var(--color-accent); margin-right: 0.5rem;"></i> Submit VIP Concierge Request</h3>
+            <p style="font-size: 0.875rem; color: var(--color-text-muted); margin-bottom: 1.5rem;">Need special celebratory arrangements, bottle service brands, or dietary adjustments for an upcoming reservation?</p>
+            <form class="dash-concierge-form" onsubmit="alert('VIP Concierge request logged! Host Marcus D. will contact you within 2 hours.'); return false;">
+              <div class="dash-form-grid">
+                <div class="dash-form-group">
+                  <label>Select Upcoming Show</label>
+                  <select>
+                    <option>Weekend Headliner Gala (Oct 02 - Booth B4)</option>
+                    <option>Late Night Roast Battle (Oct 10 - Table A2)</option>
+                    <option>Sunday Stand-Up &amp; Sangria (Oct 18 - Table C1)</option>
+                  </select>
+                </div>
+                <div class="dash-form-group">
+                  <label>Service / Celebration Type</label>
+                  <select>
+                    <option>Private Bottle Service Request</option>
+                    <option>Birthday / Anniversary Stage Shoutout</option>
+                    <option>Dietary &amp; Non-Alcoholic Mocktail Pairings</option>
+                    <option>Green Room Meet &amp; Greet Inquiries</option>
+                  </select>
+                </div>
+              </div>
+              <div class="dash-form-group">
+                <label>Special Instructions &amp; Requests</label>
+                <textarea rows="3" placeholder="Tell your VIP host about champagne preferences, guest names, or arrival timing..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Send to VIP Concierge</button>
+            </form>
+          </div>
+        </section>
+
+        <!-- ==========================================================================
+             TAB 4: BAR TAB & CREDITS
+             ========================================================================== -->
+        <section class="dash-tab-content" id="rewardsSection" data-tab="rewards">
+          <div class="dash-page-header">
+            <div>
+              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">Bar Tab, Mixology &amp; Club Credits</h1>
+              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Live lounge spending overview, cocktail loyalty point redemption, and instant digital top-up.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="alert('Instant Top-Up $50.00 loaded to Bar Tab!')"><i class="fas fa-wallet"></i> Top-Up Bar Balance</button>
+          </div>
+
+          <!-- Balances Grid -->
+          <div class="grid-3" style="margin-bottom: 2rem;">
+            <div class="dash-stat-card" style="border-left: 4px solid var(--color-accent);">
+              <div class="dash-stat-val">$145.00</div>
+              <div class="dash-stat-label">Current Bar Balance</div>
+              <p style="font-size: 0.8125rem; color: var(--color-text-muted); margin-top: 0.5rem;">Auto-applies at lounge tables &amp; speakeasy.</p>
+            </div>
+            <div class="dash-stat-card" style="border-left: 4px solid var(--color-accent-teal);">
+              <div class="dash-stat-val" style="color: var(--color-accent-teal);">1,420</div>
+              <div class="dash-stat-label">Loyalty Club Points</div>
+              <p style="font-size: 0.8125rem; color: var(--color-text-muted); margin-top: 0.5rem;">Value: <strong>$71.00</strong> in free mixology rewards.</p>
+            </div>
+            <div class="dash-stat-card" style="border-left: 4px solid var(--color-secondary);">
+              <div class="dash-stat-val" style="color: var(--color-secondary);">$320.00</div>
+              <div class="dash-stat-label">Lifetime Club Savings</div>
+              <p style="font-size: 0.8125rem; color: var(--color-text-muted); margin-top: 0.5rem;">Via Obsidian VIP discounts and loyalty rewards.</p>
+            </div>
+          </div>
+
+          <!-- Redeemable Cocktails -->
+          <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem;">Redeem Points for Signature Mixology</h3>
+          <div class="grid-3" style="margin-bottom: 2rem;">
+            <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span class="badge badge-amber" style="margin-bottom: 0.5rem;">250 POINTS</span>
+                <h4 style="font-size: 1.0625rem; font-weight: 700; margin-bottom: 0.25rem;">Smoked Rosemary Old Fashioned</h4>
+                <p style="font-size: 0.8125rem; color: var(--color-text-muted);">Bulleit bourbon, bitters, torched rosemary essence ($22 value).</p>
+              </div>
+              <button class="btn btn-outline btn-sm" style="margin-top: 1rem;" onclick="alert('Voucher redeemed! Bartender code #ROSEMARY-250 added to your tab.')">Redeem Drink</button>
+            </div>
+            <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span class="badge badge-amber" style="margin-bottom: 0.5rem;">400 POINTS</span>
+                <h4 style="font-size: 1.0625rem; font-weight: 700; margin-bottom: 0.25rem;">Artisanal Charcuterie &amp; Flatbread</h4>
+                <p style="font-size: 0.8125rem; color: var(--color-text-muted);">Imported prosciutto, aged gruyère, truffle honey ($35 value).</p>
+              </div>
+              <button class="btn btn-outline btn-sm" style="margin-top: 1rem;" onclick="alert('Voucher redeemed! Kitchen code #CHARCUTERIE-400 added to your tab.')">Redeem Food</button>
+            </div>
+            <div style="background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius-lg); padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <span class="badge badge-amber" style="margin-bottom: 0.5rem;">750 POINTS</span>
+                <h4 style="font-size: 1.0625rem; font-weight: 700; margin-bottom: 0.25rem;">Obsidian Champagne Tasting Flight</h4>
+                <p style="font-size: 0.8125rem; color: var(--color-text-muted);">3 premium grand cru pours served stage-side ($65 value).</p>
+              </div>
+              <button class="btn btn-outline btn-sm" style="margin-top: 1rem;" onclick="alert('Voucher redeemed! Sommelier flight code #CHAMPAGNE-750 added to your tab.')">Redeem Flight</button>
+            </div>
+          </div>
+
+          <!-- Transaction History Table -->
+          <div class="dash-table-card">
+            <div style="padding: 1.5rem; border-bottom: 1px solid var(--color-border);">
+              <h3 style="font-size: 1.1875rem; font-weight: 800;">Recent Lounge Transactions</h3>
+            </div>
+            <div style="overflow-x: auto;">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Location</th>
+                    <th>Amount</th>
+                    <th>Points</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Sep 12, 2026</td>
+                    <td>2x Velvet Mule + Truffle Fries</td>
+                    <td>Booth A1 Table</td>
+                    <td>$48.50</td>
+                    <td><strong style="color: var(--color-accent-teal);">+96 pts</strong></td>
+                    <td><span class="badge badge-teal">PAID</span></td>
+                  </tr>
+                  <tr>
+                    <td>Aug 28, 2026</td>
+                    <td>Obsidian Bottle Service (Veuve Clicquot)</td>
+                    <td>VIP Stage Right</td>
+                    <td>$185.00</td>
+                    <td><strong style="color: var(--color-accent-teal);">+370 pts</strong></td>
+                    <td><span class="badge badge-teal">PAID</span></td>
+                  </tr>
+                  <tr>
+                    <td>Aug 14, 2026</td>
+                    <td>Digital Account Pre-Load</td>
+                    <td>Online Top-Up</td>
+                    <td>+$100.00</td>
+                    <td><strong style="color: var(--color-accent-teal);">+100 pts</strong></td>
+                    <td><span class="badge badge-teal">CREDITED</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================================================
+             TAB 5: HEADLINER PRESALES
+             ========================================================================== -->
+        <section class="dash-tab-content" id="presalesSection" data-tab="presales">
+          <div class="dash-page-header">
+            <div>
+              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">Headliner Presales &amp; Early Drops</h1>
+              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Obsidian VIP 48-Hour advance access window before public general on-sale.</p>
+            </div>
+            <button class="btn btn-outline btn-sm" onclick="alert('Presale drop feeds synchronized!')"><i class="fas fa-rotate"></i> Refresh Early Drops</button>
+          </div>
+
+          <!-- Presale Cards -->
+          <div class="dash-ticket-card" style="border: 2px solid var(--color-accent); background: var(--color-surface);">
+            <div style="display: grid; grid-template-columns: 180px 1fr auto; gap: 1.5rem; align-items: center;" class="e-ticket-card-responsive">
+              <div style="border-radius: var(--radius-md); overflow: hidden; height: 120px;">
+                <img src="assets/images/shows/show_headliner.jpg" alt="Dave Chappelle Pop-In" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap;">
+                  <span class="badge badge-coral">PRESALE CLOSES IN 18 HOURS</span>
+                  <span class="badge badge-violet">OBSIDIAN EXCLUSIVE</span>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.35rem;">Dave Chappelle &amp; Surprise Guests (Secret Intimate Pop-In)</h3>
+                <div class="ticket-meta-list">
+                  <div class="ticket-meta-row">
+                    <i class="fas fa-calendar-days"></i>
+                    <span>Nov 06–08, 2026 • 2 Shows Nightly • Strict No-Phone Showroom</span>
+                  </div>
+                </div>
+                <div style="font-size: 0.8125rem; background: var(--color-surface-soft); padding: 0.4rem 0.8rem; border-radius: var(--radius-sm); display: inline-block; margin-top: 0.25rem;">
+                  Your Presale Access Code: <strong style="color: var(--color-accent); font-family: monospace;">OBSIDIAN-VAULT-26</strong>
+                </div>
+              </div>
+              <div>
+                <a href="tickets.html" class="btn btn-primary btn-sm">
+                  <i class="fas fa-lock-open"></i> Unlock VIP Seats
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-ticket-card">
+            <div style="display: grid; grid-template-columns: 180px 1fr auto; gap: 1.5rem; align-items: center;" class="e-ticket-card-responsive">
+              <div style="border-radius: var(--radius-md); overflow: hidden; height: 120px;">
+                <img src="assets/images/shows/roast_2.jpg" alt="Ali Wong Tour" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap;">
+                  <span class="badge badge-amber">EARLY DROP OPENS OCT 01</span>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.35rem;">Ali Wong: Raw &amp; Unfiltered World Tour Preview</h3>
+                <div class="ticket-meta-list">
+                  <div class="ticket-meta-row">
+                    <i class="fas fa-calendar-days"></i>
+                    <span>Nov 20–22, 2026 • Main Stage Showroom</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-outline btn-sm" onclick="alert('SMS Priority Alert configured for Ali Wong tickets!')">
+                  <i class="fas fa-bell"></i> Set SMS Alert
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="dash-ticket-card">
+            <div style="display: grid; grid-template-columns: 180px 1fr auto; gap: 1.5rem; align-items: center;" class="e-ticket-card-responsive">
+              <div style="border-radius: var(--radius-md); overflow: hidden; height: 120px;">
+                <img src="assets/images/shows/standup_2.jpg" alt="Trevor Noah" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <div>
+                <div style="display: flex; gap: 0.5rem; align-items: center; margin-bottom: 0.35rem; flex-wrap: wrap;">
+                  <span class="badge badge-teal">EARLY DROP OPENS OCT 15</span>
+                </div>
+                <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.35rem;">Trevor Noah: Off The Record Stand-Up Night</h3>
+                <div class="ticket-meta-list">
+                  <div class="ticket-meta-row">
+                    <i class="fas fa-calendar-days"></i>
+                    <span>Dec 04–06, 2026 • Main Stage Showroom</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <button class="btn btn-outline btn-sm" onclick="alert('Added to priority waitlist for Trevor Noah!')">
+                  <i class="fas fa-list-check"></i> Join Priority Queue
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ==========================================================================
+             TAB 6: SETTINGS
+             ========================================================================== -->
+        <section class="dash-tab-content" id="settingsSection" data-tab="settings">
+          <div class="dash-page-header">
+            <div>
+              <h1 style="font-size: 1.875rem; font-weight: 800; margin-bottom: 0.25rem;">Patron Account &amp; Preferences</h1>
+              <p style="color: var(--color-text-muted); font-size: 0.9375rem;">Manage your personal profile, notification alerts, password credentials, and view settings.</p>
+            </div>
+            <button class="btn btn-primary btn-sm" onclick="alert('Account preferences updated successfully!')"><i class="fas fa-floppy-disk"></i> Save Changes</button>
+          </div>
+
+          <div class="feature-card" style="padding: 2rem; background: var(--color-surface); border: 1px solid var(--color-border); margin-bottom: 2rem;">
+            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1.5rem;">Personal Profile</h3>
+            <form onsubmit="alert('Personal information updated!'); return false;">
+              <div class="dash-form-grid">
+                <div class="dash-form-group">
+                  <label>First Name</label>
+                  <input type="text" value="Alex">
+                </div>
+                <div class="dash-form-group">
+                  <label>Last Name</label>
+                  <input type="text" value="Morgan">
+                </div>
+              </div>
+              <div class="dash-form-grid">
+                <div class="dash-form-group">
+                  <label>Email Address</label>
+                  <input type="email" value="alex.morgan@example.com">
+                </div>
+                <div class="dash-form-group">
+                  <label>Phone Number</label>
+                  <input type="tel" value="+1 (555) 234-8901">
+                </div>
+              </div>
+              <div class="dash-form-grid">
+                <div class="dash-form-group">
+                  <label>Preferred Seating Area</label>
+                  <select>
+                    <option selected>VIP Stage-Side Leather Booth</option>
+                    <option>Front Row Intimate Table</option>
+                    <option>Elevated Speakeasy Mezzanine</option>
+                    <option>Main Floor Center</option>
+                  </select>
+                </div>
+                <div class="dash-form-group">
+                  <label>Birthday (For Annual Champagne Perk)</label>
+                  <input type="text" value="October 14">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-outline btn-sm" style="margin-top: 0.5rem;">Update Profile Info</button>
+            </form>
+          </div>
+
+          <!-- Notification & Communication -->
+          <div class="feature-card" style="padding: 2rem; background: var(--color-surface); border: 1px solid var(--color-border); margin-bottom: 2rem;">
+            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem;">Notification &amp; Alert Preferences</h3>
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer;">
+                <input type="checkbox" checked style="width: 18px; height: 18px; accent-color: var(--color-accent);">
+                <div>
+                  <strong>SMS Show &amp; Door Time Reminders</strong>
+                  <p style="font-size: 0.8125rem; color: var(--color-text-muted); margin: 0;">Receive an SMS alert 2 hours prior to showtime with parking &amp; door opening updates.</p>
+                </div>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer;">
+                <input type="checkbox" checked style="width: 18px; height: 18px; accent-color: var(--color-accent);">
+                <div>
+                  <strong>Headliner Presale 48-Hour Alerts</strong>
+                  <p style="font-size: 0.8125rem; color: var(--color-text-muted); margin: 0;">Immediate notification when secret headliners add pop-in shows to the calendar.</p>
+                </div>
+              </label>
+              <label style="display: flex; align-items: center; gap: 0.75rem; cursor: pointer;">
+                <input type="checkbox" checked style="width: 18px; height: 18px; accent-color: var(--color-accent);">
+                <div>
+                  <strong>Bar Tab Digital Receipts</strong>
+                  <p style="font-size: 0.8125rem; color: var(--color-text-muted); margin: 0;">Email itemized drinks &amp; dining receipts automatically at close of night.</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Security Settings -->
+          <div class="feature-card" style="padding: 2rem; background: var(--color-surface); border: 1px solid var(--color-border);">
+            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1.5rem;">Security &amp; Password</h3>
+            <form onsubmit="alert('Password updated successfully!'); return false;">
+              <div class="dash-form-grid">
+                <div class="dash-form-group">
+                  <label>Current Password</label>
+                  <input type="password" placeholder="••••••••••••">
+                </div>
+                <div class="dash-form-group">
+                  <label>New Password</label>
+                  <input type="password" placeholder="Minimum 8 characters">
+                </div>
+              </div>
+              <button type="submit" class="btn btn-outline btn-sm" style="margin-top: 0.5rem;">Update Password</button>
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

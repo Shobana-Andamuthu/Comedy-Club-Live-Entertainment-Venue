@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shows &amp; Calendar — The Laugh Vault Comedy Club</title>
+  <meta name="description" content="Browse full calendar of upcoming stand-up comedy shows, roast battles, and touring headliners at The Laugh Vault.">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+  <!-- Page Loader -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-content">
+      <div class="loader-icon-wrap">
+        <div class="loader-mic-icon">
+          <i class="fas fa-microphone-lines"></i>
+        </div>
+        <div class="loader-pulse-ring"></div>
+        <div class="loader-pulse-ring delay"></div>
+      </div>
+      <div class="loader-brand-title">THE LAUGH VAULT</div>
+      <div class="loader-brand-subtitle">LIVE ENTERTAINMENT &amp; COMEDY</div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon"><i class="fas fa-microphone-lines"></i></div>
+          <div class="brand-text">
+            <span class="brand-title">LAUGH VAULT</span>
+            <span class="brand-subtitle">COMEDY CLUB</span>
+          </div>
+        </a>
+
+        <ul class="nav-menu">
+          <li class="nav-item dropdown">
+            <a href="index.html" class="nav-link">
+              Home <i class="fas fa-chevron-down dropdown-icon"></i>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html" class="dropdown-link">Home 1</a></li>
+              <li><a href="home-2.html" class="dropdown-link">Home 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="shows.html" class="nav-link active">Shows</a></li>
+          <li class="nav-item"><a href="tickets.html" class="nav-link">Tickets</a></li>
+          <li class="nav-item"><a href="vip.html" class="nav-link">VIP</a></li>
+          <li class="nav-item"><a href="rentals.html" class="nav-link">Rentals</a></li>
+          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="control-btn theme-toggle-btn" aria-label="Toggle Theme Mode"><i class="fas fa-moon"></i></button>
+          <button class="control-btn rtl-toggle-btn" aria-label="Toggle Text Direction">RTL</button>
+          <a href="login.html" class="btn btn-primary btn-sm desktop-only-btn"><i class="fas fa-arrow-right-to-bracket"></i> Login</a>
+          <button class="hamburger-btn" aria-label="Toggle Navigation Menu"><span></span><span></span><span></span></button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mobile-nav-drawer">
+      <ul class="mobile-nav-links">
+        <li>
+          <a href="#" class="mobile-nav-link mobile-dropdown-toggle">
+            <span>Home</span><i class="fas fa-chevron-down dropdown-icon"></i>
+          </a>
+          <ul class="mobile-submenu">
+            <li><a href="index.html" class="mobile-submenu-link">Home 1</a></li>
+            <li><a href="home-2.html" class="mobile-submenu-link">Home 2</a></li>
+          </ul>
+        </li>
+        <li><a href="shows.html" class="mobile-nav-link active">Shows</a></li>
+        <li><a href="tickets.html" class="mobile-nav-link">Tickets</a></li>
+        <li><a href="vip.html" class="mobile-nav-link">VIP</a></li>
+        <li><a href="rentals.html" class="mobile-nav-link">Rentals</a></li>
+        <li><a href="about.html" class="mobile-nav-link">About</a></li>
+        <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+      </ul>
+      <div class="mobile-drawer-bottom">
+        <a href="login.html" class="btn btn-primary" style="width: 100%;"><i class="fas fa-arrow-right-to-bracket"></i> Login</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SECTION 1: INNER PAGE HERO
+       ========================================================================== -->
+  <section class="inner-hero-section">
+    <div class="inner-hero-bg-wrapper">
+      <img src="assets/images/experience/stage_cta.jpg" alt="Comedy club stage and lighting" class="inner-hero-bg">
+      <div class="inner-hero-overlay"></div>
+    </div>
+    <div class="inner-hero-content">
+      <div class="section-eyebrow"><i class="fas fa-calendar-star"></i> SHOW CALENDAR</div>
+      <h1 class="inner-hero-title">Live Comedy Schedule</h1>
+      <p class="inner-hero-desc">Discover upcoming performances, national headliner tours, and weekly roast spectacles.</p>
+      <div class="breadcrumb-trail">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+        <span>Shows &amp; Calendar</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: CALENDAR & MONTH NAVIGATOR (Bento Grid 4 Cards)
+       ========================================================================== -->
+  <section style="background: var(--color-surface-soft);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow eyebrow-violet"><i class="fas fa-clock"></i> THIS MONTH</div>
+        <h2 class="section-title">October 2026 Lineup</h2>
+        <p class="section-desc">Select your date and reserve seats online with instant e-ticket confirmation.</p>
+      </div>
+
+      <div class="grid-4">
+        <!-- Show Card 1 -->
+        <article class="bento-card">
+          <div class="bento-media">
+            <img src="assets/images/shows/lineup_gala.jpg" alt="Weekend Headliner Gala Performance">
+          </div>
+          <div class="bento-body">
+            <span class="badge badge-coral">Fri, Oct 02 • 8:00 PM</span>
+            <h3>Weekend Headliner Gala</h3>
+            <p>Featuring 4 prime national headliners back-to-back in our main showroom.</p>
+            <div class="bento-card-footer">
+              <strong>$38.00</strong>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Book Seats</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Show Card 2 -->
+        <article class="bento-card">
+          <div class="bento-media">
+            <img src="assets/images/shows/lineup_roast.jpg" alt="Underground Roast Tournament">
+          </div>
+          <div class="bento-body">
+            <span class="badge badge-violet">Sat, Oct 03 • 10:30 PM</span>
+            <h3>Underground Roast Battle</h3>
+            <p>16 comedians in a knockout roast bracket judged live by the audience.</p>
+            <div class="bento-card-footer">
+              <strong>$30.00</strong>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Book Seats</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Show Card 3 -->
+        <article class="bento-card">
+          <div class="bento-media">
+            <img src="assets/images/shows/lineup_improv.jpg" alt="Midnight Improv Chaos Session">
+          </div>
+          <div class="bento-body">
+            <span class="badge badge-amber">Sun, Oct 04 • 7:30 PM</span>
+            <h3>Midnight Improv Jam</h3>
+            <p>Spontaneous audience participation games and rapid-fire sketch comedy.</p>
+            <div class="bento-card-footer">
+              <strong>$25.00</strong>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Book Seats</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Show Card 4 -->
+        <article class="bento-card">
+          <div class="bento-media">
+            <img src="assets/images/shows/lineup_tour.jpg" alt="The Sovereign Tour Special">
+          </div>
+          <div class="bento-body">
+            <span class="badge badge-teal">Fri, Oct 09 • 9:00 PM</span>
+            <h3>The Sovereign Tour</h3>
+            <p>Special 75-minute solo taping direct from Netflix and Comedy Central.</p>
+            <div class="bento-card-footer">
+              <strong>$45.00</strong>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Book Seats</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: SIGNATURE FESTIVALS & TOURS (Spotlight Split Layout)
+       ========================================================================== -->
+  <section>
+    <div class="container">
+      <div class="section-header text-start">
+        <div class="section-eyebrow"><i class="fas fa-ticket-simple"></i> COMEDY SPOTLIGHT</div>
+        <h2 class="section-title">Special Tour Engagements</h2>
+        <p class="section-desc">Limited multi-night residencies and television special tapings.</p>
+      </div>
+
+      <div class="experience-split">
+        <div class="split-media">
+          <img src="assets/images/shows/shows_special_tour.jpg" alt="Special Tour Engagements Comedy Club Stage" class="split-img">
+        </div>
+        <div class="experience-content">
+          <div class="badge badge-coral" style="margin-bottom: 1rem; width: fit-content;">EXCLUSIVE 3-NIGHT RUN</div>
+          <h3 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">The Velvet Comedy Invitational</h3>
+          <p style="margin-bottom: 1.5rem; color: var(--color-text-muted); line-height: 1.65;">
+            Join us for our signature annual comedy festival featuring award-winning standups from Edinburgh Fringe, Just For Laughs Montreal, and Netflix specials.
+          </p>
+          <div class="perks-list" style="margin: 0 0 2rem 0;">
+            <div class="perk-item">
+              <div class="perk-icon"><i class="fas fa-check"></i></div>
+              <div class="perk-text">
+                <h4>All-Access Festival Passes</h4>
+                <p>Enjoy priority table seating for all 12 festival sessions with complimentary wine tasting.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-icon"><i class="fas fa-check"></i></div>
+              <div class="perk-text">
+                <h4>Exclusive Green Room Access</h4>
+                <p>VIP ticket holders receive direct invitations to after-hours performer meetups.</p>
+              </div>
+            </div>
+          </div>
+          <a href="tickets.html" class="btn btn-primary btn-md"><i class="fas fa-ticket"></i> Get Festival Pass ($89)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: WEEKLY RESIDENCY SCHEDULE (NEW SECTION)
+       ========================================================================== -->
+  <section style="background: var(--color-surface-soft);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow eyebrow-coral"><i class="fas fa-calendar-days"></i> RECURRING NIGHTS</div>
+        <h2 class="section-title">Weekly Residency Schedule</h2>
+        <p class="section-desc">Six nights a week of curated comedic programming across multiple distinct formats.</p>
+      </div>
+
+      <div class="grid-4">
+        <!-- Night 1 -->
+        <article class="feature-card" style="padding: 0; overflow: hidden;">
+          <div style="height: 170px; width: 100%; overflow: hidden;">
+            <img src="assets/images/shows/residency_tuesday.jpg" alt="Tuesday Open Mic Comedy Show" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1;">
+            <span class="badge badge-teal" style="margin-bottom: 0.5rem; width: fit-content;">EVERY TUESDAY</span>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">The Pro-Am Crucible</h3>
+            <p style="font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 1rem;">
+              20 lottery-selected comics testing raw material with surprise drop-ins from touring pros.
+            </p>
+            <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 0.75rem; border-top: 1px solid var(--color-border);">
+              <span style="font-size: 0.8125rem; font-weight: 700; color: var(--color-accent);">$10 Entry</span>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Reserve</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Night 2 -->
+        <article class="feature-card" style="padding: 0; overflow: hidden;">
+          <div style="height: 170px; width: 100%; overflow: hidden;">
+            <img src="assets/images/shows/residency_thursday.jpg" alt="Thursday Cheering Audience and Comedians" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1;">
+            <span class="badge badge-violet" style="margin-bottom: 0.5rem; width: fit-content;">EVERY THURSDAY</span>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Roast Royale League</h3>
+            <p style="font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 1rem;">
+              Head-to-head comedic verbal warfare judged by our panel of ruthless resident writers.
+            </p>
+            <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 0.75rem; border-top: 1px solid var(--color-border);">
+              <span style="font-size: 0.8125rem; font-weight: 700; color: var(--color-accent);">$20 Entry</span>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Reserve</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Night 3 -->
+        <article class="feature-card" style="padding: 0; overflow: hidden;">
+          <div style="height: 170px; width: 100%; overflow: hidden;">
+            <img src="assets/images/shows/residency_friday.jpg" alt="Friday Stand-Up Night with Seated Audience" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1;">
+            <span class="badge badge-amber" style="margin-bottom: 0.5rem; width: fit-content;">EVERY FRIDAY</span>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Midnight Unfiltered</h3>
+            <p style="font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 1rem;">
+              Late-night experimental sets, musical improv, and interactive crowd prompt battles.
+            </p>
+            <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 0.75rem; border-top: 1px solid var(--color-border);">
+              <span style="font-size: 0.8125rem; font-weight: 700; color: var(--color-accent);">$25 Entry</span>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Reserve</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Night 4 -->
+        <article class="feature-card" style="padding: 0; overflow: hidden;">
+          <div style="height: 170px; width: 100%; overflow: hidden;">
+            <img src="assets/images/shows/residency_saturday.jpg" alt="Saturday Highline Club Stage Headliner" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div style="padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1;">
+            <span class="badge badge-coral" style="margin-bottom: 0.5rem; width: fit-content;">EVERY SATURDAY</span>
+            <h3 style="font-size: 1.15rem; margin-bottom: 0.4rem;">Saturday Gala Showcase</h3>
+            <p style="font-size: 0.8125rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 1rem;">
+              Our premier flagship production with top touring headliners, VIP service, and after-party.
+            </p>
+            <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 0.75rem; border-top: 1px solid var(--color-border);">
+              <span style="font-size: 0.8125rem; font-weight: 700; color: var(--color-accent);">$38 Entry</span>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Reserve</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: THEATER ACOUSTICS & SEATING GUIDE
+       ========================================================================== -->
+  <section>
+    <div class="container">
+      <div class="split-layout">
+        <div class="split-content">
+          <div class="section-eyebrow eyebrow-violet"><i class="fas fa-headphones"></i> AUDITORIUM SPECS</div>
+          <h2 class="section-title">Acoustically Tuned For The Purest Laughs</h2>
+          <p style="color: var(--color-text-muted); font-size: 1rem; line-height: 1.65; margin-bottom: 1.5rem;">
+            Custom sound baffling and multi-point condenser microphones ensure every punchline is heard with crystalline clarity from the first row to the back booth.
+          </p>
+          <div class="perks-list">
+            <div class="perk-item">
+              <div class="perk-icon"><i class="fas fa-bullhorn"></i></div>
+              <div class="perk-text">
+                <h4>Zero Dead Zones</h4>
+                <p>Designed by world-class acoustic architects to maximize laughter reverberation.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-icon"><i class="fas fa-chair"></i></div>
+              <div class="perk-text">
+                <h4>Plush Velvet Seating</h4>
+                <p>Curved banquettes and unobstructed sightlines guaranteed across all tiers.</p>
+              </div>
+            </div>
+          </div>
+          <a href="tickets.html" class="btn btn-outline btn-md" style="margin-top: 2rem;"><i class="fas fa-eye"></i> View Seating Chart</a>
+        </div>
+
+        <div class="split-media">
+          <img src="assets/images/shows/shows_acoustics_laugh.jpg" alt="Acoustically Tuned Comedy Showcase Performers" class="split-img">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: GROUP BOOKING & CORPORATE EVENTS MARQUEE CTA
+       ========================================================================== -->
+  <section class="marquee-cta-section">
+    <div class="marquee-cta-bg">
+      <img src="assets/images/experience/cocktail_lounge.jpg" alt="Velvet Mic Marquee" class="marquee-bg-img">
+      <div class="marquee-cta-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="marquee-cta-content">
+        <div class="section-eyebrow eyebrow-teal"><i class="fas fa-users"></i> GROUP &amp; CORPORATE EVENTS</div>
+        <h2 class="marquee-cta-title">Bring Your Whole Crew to The Velvet Stage</h2>
+        <p class="marquee-cta-desc">
+          Special discounted rates, dedicated VIP table sections, and customized cocktail service for parties of 8 or more.
+        </p>
+        <div class="marquee-cta-actions">
+          <a href="rentals.html" class="btn btn-primary btn-lg"><i class="fas fa-envelope"></i> Inquire Group Packages</a>
+          <a href="tickets.html" class="btn btn-outline btn-lg" style="color: #fff; border-color: rgba(255,255,255,0.4);"><i class="fas fa-ticket"></i> Buy Single Tickets</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1.25rem;">
+            <div class="logo-icon"><i class="fas fa-microphone-lines"></i></div>
+            <div class="brand-text">
+              <span class="brand-title">LAUGH VAULT</span>
+              <span class="brand-subtitle">COMEDY CLUB</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            The city's preeminent comedy stage and craft cocktail lounge. Delivering unforgettable laughs, touring headliners, and signature drinks 6 nights a week.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home 1</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="shows.html">Show Calendar</a></li>
+            <li><a href="tickets.html">Tickets &amp; Pricing</a></li>
+            <li><a href="vip.html">VIP Memberships</a></li>
+            <li><a href="rentals.html">Venue Rentals</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Club Information</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About The Laugh Vault</a></li>
+            <li><a href="contact.html">Box Office &amp; Directions</a></li>
+            <li><a href="dashboard.html">Patron Dashboard</a></li>
+            <li><a href="login.html">Account Login</a></li>
+            <li><a href="register.html">Sign Up for Passes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Box Office &amp; Hours</h4>
+          <ul class="footer-contact-list">
+            <li><i class="fas fa-location-dot"></i> 442 Speakeasy Row, Theater Arts District, Downtown</li>
+            <li><i class="fas fa-phone"></i> (555) 843-8358</li>
+            <li><i class="fas fa-envelope"></i> boxoffice@laughvault.com</li>
+            <li><i class="fas fa-clock"></i> Tue – Sun: 5:00 PM – 2:00 AM (Closed Mon)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 The Laugh Vault Comedy Club &amp; Live Lounge. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Admission</a>
+          <a href="#">House Rules</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top-btn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
