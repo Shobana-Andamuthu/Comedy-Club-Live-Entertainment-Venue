@@ -63,25 +63,29 @@
 
     <!-- Form Right Pane -->
     <div class="auth-form-pane">
+      <!-- Top Right Theme & RTL Controls -->
+      <div class="auth-top-controls">
+        <button class="control-btn theme-toggle-btn" aria-label="Toggle Theme Mode" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+        <button class="control-btn rtl-toggle-btn" aria-label="Toggle Text Direction" title="Toggle RTL/LTR">RTL</button>
+      </div>
+
       <div class="auth-form-box">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem;">
-          <a href="index.html" class="brand-logo" style="text-decoration: none;">
+        <!-- Centered Brand Logo -->
+        <div class="auth-brand-center">
+          <a href="index.html" class="brand-logo">
             <div class="logo-icon"><i class="fas fa-microphone-lines"></i></div>
             <div class="brand-text">
               <span class="brand-title">LAUGH VAULT</span>
               <span class="brand-subtitle">COMEDY CLUB</span>
             </div>
           </a>
-          <div style="display: flex; gap: 0.5rem; align-items: center;">
-            <button class="control-btn theme-toggle-btn" aria-label="Toggle Theme Mode"><i class="fas fa-moon"></i></button>
-            <button class="control-btn rtl-toggle-btn" aria-label="Toggle Text Direction">RTL</button>
-          </div>
         </div>
 
-        <div style="margin-bottom: 2rem;">
-          <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem;">Welcome Back</h1>
-          <p style="color: var(--color-text-muted); font-size: 0.9375rem;">
-            Enter your credentials to access your tickets and reservations.
+        <!-- Centered Welcome Heading & Subtext -->
+        <div style="margin-bottom: 2rem; text-align: center;">
+          <h1 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.5rem; letter-spacing: -0.5px;">Welcome Back</h1>
+          <p style="color: var(--color-text-muted); font-size: 0.9375rem; max-width: 380px; margin: 0 auto; line-height: 1.5;">
+            Enter your credentials to access your tickets, passes, and VIP table reservations.
           </p>
         </div>
 

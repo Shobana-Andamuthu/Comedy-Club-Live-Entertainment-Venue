@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="assets/css/style.css?v=2.9">
-  <link rel="stylesheet" href="assets/css/responsive.css?v=2.9">
+  <link rel="stylesheet" href="assets/css/style.css?v=3.0">
+  <link rel="stylesheet" href="assets/css/responsive.css?v=3.0">
 </head>
 <body>
 
@@ -104,8 +104,13 @@
           </button>
 
           <!-- Login Button -->
-          <a href="login.html" class="btn btn-primary btn-sm desktop-only-btn" id="navLoginBtn">
+          <a href="login.html" class="btn btn-outline btn-sm desktop-only-btn" id="navLoginBtn">
             <i class="fas fa-arrow-right-to-bracket"></i> Login
+          </a>
+
+          <!-- Book a Table Button (Last) -->
+          <a href="tickets.html" class="btn btn-primary btn-sm header-book-btn" id="navBookTableBtn">
+            <i class="fas fa-champagne-glasses"></i> <span>Book a Table</span>
           </a>
 
           <!-- Hamburger Button for Mobile / Tablet -->
@@ -141,8 +146,11 @@
       </ul>
 
       <div class="mobile-drawer-bottom">
-        <a href="login.html" class="btn btn-primary" style="width: 100%;">
+        <a href="login.html" class="btn btn-outline" style="width: 100%; margin-bottom: 0.65rem;">
           <i class="fas fa-arrow-right-to-bracket"></i> Login
+        </a>
+        <a href="tickets.html" class="btn btn-primary" style="width: 100%;">
+          <i class="fas fa-champagne-glasses"></i> Book a Table
         </a>
       </div>
     </div>
@@ -177,7 +185,7 @@
       <!-- Live Ticker Bar -->
       <div class="h2-live-ticker">
         <i class="fas fa-radio"></i>
-        <span><strong>NOW PLAYING:</strong> Friday Midnight Improv • 11:15 PM • 12 Seats</span>
+        <span><strong>NOW PLAYING:</strong> Friday Midnight Improv • 11:15 PM • 12 Seats Left</span>
       </div>
     </div>
   </section>
@@ -240,7 +248,72 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 3: FEATURED COMEDY NIGHTS (Unified High-Impact Editorial Grid - Real Photos)
+       SECTION 3 (NEW): UPCOMING WEEKEND SPOTLIGHT HEADLINERS
+       ========================================================================== -->
+  <section style="background: var(--color-surface-soft);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow eyebrow-coral">
+          <i class="fas fa-fire"></i> THIS WEEKEND'S LINEUP
+        </div>
+        <h2 class="section-title">Upcoming Spotlight Headliners</h2>
+        <p class="section-desc">Handpicked nationally touring stand-up performers recording live specials at The Laugh Vault.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Headliner 1 -->
+        <article class="bento-card">
+          <div class="bento-media">
+            <img src="assets/images/shows/residency_friday.jpg" alt="Julian Cole Live Stand-Up Tour">
+          </div>
+          <div class="bento-body">
+            <span class="badge badge-coral" style="align-self: flex-start; width: fit-content;">Fri, Oct 16 • 8:00 PM</span>
+            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Julian Cole: The Unfiltered Tour</h3>
+            <p>Veteran late-night headliner with 3 streaming specials delivering dark observational punchlines.</p>
+            <div class="bento-card-footer">
+              <strong>$40.00</strong>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Book Table</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Headliner 2 -->
+        <article class="bento-card">
+          <div class="bento-media">
+            <img src="assets/images/shows/residency_saturday.jpg" alt="Maya Vance Satire After Midnight">
+          </div>
+          <div class="bento-body">
+            <span class="badge badge-violet" style="align-self: flex-start; width: fit-content;">Sat, Oct 17 • 9:30 PM</span>
+            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Maya Vance: Satire After Dark</h3>
+            <p>Razor-sharp political wit, viral podcast tales, and spontaneous interactive crowd work.</p>
+            <div class="bento-card-footer">
+              <strong>$45.00</strong>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Book Table</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Headliner 3 -->
+        <article class="bento-card">
+          <div class="bento-media">
+            <img src="assets/images/shows/residency_thursday.jpg" alt="Underground Roast Special">
+          </div>
+          <div class="bento-body">
+            <span class="badge badge-gold" style="align-self: flex-start; width: fit-content;">Sun, Oct 18 • 7:30 PM</span>
+            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">The Vault Roast Showdown</h3>
+            <p>8 master roasters face off head-to-head with no safety nets and audience-decided champions.</p>
+            <div class="bento-card-footer">
+              <strong>$32.00</strong>
+              <a href="tickets.html" class="btn btn-primary btn-sm">Book Table</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: FEATURED COMEDY NIGHTS (Unified High-Impact Editorial Grid - High Contrast)
        ========================================================================== -->
   <section class="h2-featured-section" id="featuredNightsSection">
     <div class="container">
@@ -268,7 +341,7 @@
             <div class="featured-card-bottom-row">
               <a href="tickets.html" class="btn btn-primary btn-md">Book Prime Table ($45)</a>
               <div class="featured-card-meta">
-                <span>Doors 8:00 PM • Showtime 9:00 PM</span>
+                <span><i class="fas fa-clock"></i> Doors 8:00 PM • Showtime 9:00 PM</span>
               </div>
             </div>
           </div>
@@ -317,7 +390,57 @@
   </section>
 
   <!-- ==========================================================================
-       SECTION 4: AUDIENCE & VENUE EXPERIENCE (3-Column Visual Moments - Real Photos)
+       SECTION 5 (NEW): CRAFT MIXOLOGY & TABLESERVICE CULINARY SHOWCASE
+       ========================================================================== -->
+  <section style="background: var(--color-surface-soft);">
+    <div class="container">
+      <div class="experience-split">
+        <div class="split-media">
+          <img src="assets/images/experience/cocktail_lounge.jpg" alt="Speakeasy Cocktail Lounge at The Laugh Vault" class="split-img">
+        </div>
+        <div class="experience-content">
+          <div class="badge badge-teal" style="margin-bottom: 0.85rem; width: fit-content;">CRAFT MIXOLOGY &amp; DINING</div>
+          <h2 style="font-size: 2.15rem; font-weight: 800; margin-bottom: 1rem; line-height: 1.2;">
+            Artisanal Cocktails &amp; Tableside Service
+          </h2>
+          <p style="margin-bottom: 1.5rem; color: var(--color-text-muted); line-height: 1.65; font-size: 0.95rem;">
+            Never miss a punchline waiting in line at the bar. Our dedicated cocktail servers bring award-winning craft concoctions, local IPAs, and gourmet shared plates directly to your table throughout every set.
+          </p>
+
+          <div class="perks-list" style="margin: 0 0 2rem 0;">
+            <div class="perk-item">
+              <div class="perk-icon"><i class="fas fa-martini-glass-citrus"></i></div>
+              <div class="perk-text">
+                <h4>Signature Stand-Up Cocktails</h4>
+                <p>House favorites including The Punchline Negroni, Heckler's Mule, and Smoky Bourbon Roast.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-icon"><i class="fas fa-utensils"></i></div>
+              <div class="perk-text">
+                <h4>Chef-Curated Small Bites</h4>
+                <p>Artisanal flatbreads, Angus beef sliders, truffle parmesan fries, and warm churro bites.</p>
+              </div>
+            </div>
+            <div class="perk-item">
+              <div class="perk-icon"><i class="fas fa-wine-glass"></i></div>
+              <div class="perk-text">
+                <h4>VIP Bottle &amp; Champagne Service</h4>
+                <p>Curated reserve list for plush booths with dedicated concierge table attendants.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary btn-md">
+            <i class="fas fa-book-open"></i> View Bar &amp; Food Menu
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: AUDIENCE & VENUE EXPERIENCE (3-Column Visual Moments - Real Photos)
        ========================================================================== -->
   <section class="h2-moments-section" id="venueMomentsSection">
     <div class="container">
@@ -366,8 +489,200 @@
     </div>
   </section>
 
+
+
   <!-- ==========================================================================
-       SECTION 5: VIP SOCIETY / MARQUEE FINAL CTA (Real Photo Background)
+       SECTION 7: SEATING PERSPECTIVES & TABLE TIERS (Choose Your Experience)
+       ========================================================================== -->
+  <section style="background: var(--color-surface-soft);" id="seatingTiersSection">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow eyebrow-coral">
+          <i class="fas fa-couch"></i> SIGHTLINES &amp; SEATING TIERS
+        </div>
+        <h2 class="section-title">Choose Your Showroom Experience</h2>
+        <p class="section-desc">From thrilling front-row crowd-work tables to elevated velvet VIP booths with dedicated bottle service.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Tier 1: Front-Row Stage Table -->
+        <div class="tier-card">
+          <div class="tier-card-media">
+            <img src="assets/images/home2/friends_laughing.jpg" alt="Front Row Stage Tables at The Laugh Vault">
+            <div class="tier-card-badge">
+              <span class="badge badge-coral">RINGSIDE ACCESS</span>
+            </div>
+          </div>
+          <div class="tier-card-body">
+            <h3 class="tier-card-title">Front-Row Stage Tables</h3>
+            <div class="tier-card-subtitle">Intimate 2–4 Guest Cabaret Tables</div>
+            <p class="tier-card-desc">Feel the raw energy up close. Direct eye contact with headliners and high probability of spontaneous crowd work.</p>
+            <ul class="tier-card-features">
+              <li><i class="fas fa-check-circle"></i> Direct stage-front seating (0–6 ft)</li>
+              <li><i class="fas fa-check-circle"></i> Fast tableside cocktail service</li>
+              <li><i class="fas fa-check-circle"></i> Standard 2-item minimum</li>
+            </ul>
+            <div class="tier-card-footer">
+              <div class="tier-card-price">
+                <span class="price-from">Starting At</span>
+                <span class="price-val">$35<small style="font-size: 0.75rem; font-weight: 500; color: var(--color-text-muted);">/seat</small></span>
+              </div>
+              <a href="tickets.html" class="btn btn-outline btn-sm">Reserve Table</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tier 2: Velvet VIP Booth (Featured) -->
+        <div class="tier-card tier-card-featured">
+          <div class="tier-card-media">
+            <img src="assets/images/vip/vip_lounge_luxury.jpg" alt="Plush Velvet VIP Booths">
+            <div class="tier-card-badge">
+              <span class="badge badge-violet">MOST POPULAR VIP</span>
+            </div>
+          </div>
+          <div class="tier-card-body">
+            <h3 class="tier-card-title">Elevated Velvet Booths</h3>
+            <div class="tier-card-subtitle">Plush Banquettes for Parties of 4–8</div>
+            <p class="tier-card-desc">The ultimate comedy nightlife luxury. Unobstructed sightlines, plush crimson velvet banquettes, and dedicated VIP servers.</p>
+            <ul class="tier-card-features">
+              <li><i class="fas fa-check-circle"></i> Elevated unobstructed center sightlines</li>
+              <li><i class="fas fa-check-circle"></i> Complimentary welcome champagne toast</li>
+              <li><i class="fas fa-check-circle"></i> Dedicated private bottle attendant</li>
+            </ul>
+            <div class="tier-card-footer">
+              <div class="tier-card-price">
+                <span class="price-from">Starting At</span>
+                <span class="price-val">$55<small style="font-size: 0.75rem; font-weight: 500; color: var(--color-text-muted);">/seat</small></span>
+              </div>
+              <a href="vip.html" class="btn btn-primary btn-sm">Book VIP Booth</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tier 3: Speakeasy Mezzanine High-Tops -->
+        <div class="tier-card">
+          <div class="tier-card-media">
+            <img src="assets/images/rentals/rental_suite.jpg" alt="Speakeasy Mezzanine High-Top Stools">
+            <div class="tier-card-badge">
+              <span class="badge badge-gold">CASUAL &amp; SOCIAL</span>
+            </div>
+          </div>
+          <div class="tier-card-body">
+            <h3 class="tier-card-title">Mezzanine High-Tops</h3>
+            <div class="tier-card-subtitle">Bar Counter &amp; High-Top Stools</div>
+            <p class="tier-card-desc">Casual elevated seating adjacent to our craft mixology bar. Perfect for casual drop-ins, solo comedy lovers, and social mingling.</p>
+            <ul class="tier-card-features">
+              <li><i class="fas fa-check-circle"></i> Immediate craft draft &amp; cocktail bar access</li>
+              <li><i class="fas fa-check-circle"></i> Full showroom audio &amp; wide stage view</li>
+              <li><i class="fas fa-check-circle"></i> Walk-in and flexible party seating</li>
+            </ul>
+            <div class="tier-card-footer">
+              <div class="tier-card-price">
+                <span class="price-from">Starting At</span>
+                <span class="price-val">$25<small style="font-size: 0.75rem; font-weight: 500; color: var(--color-text-muted);">/seat</small></span>
+              </div>
+              <a href="tickets.html" class="btn btn-outline btn-sm">Reserve Stool</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 8: PRIVATE VENUE BUYOUTS & SPECIAL EVENTS
+       ========================================================================== -->
+  <section id="privateEventsSection">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-eyebrow eyebrow-teal">
+          <i class="fas fa-building-user"></i> PRIVATE HIRE &amp; BUYOUTS
+        </div>
+        <h2 class="section-title">Host Your Private Event at The Vault</h2>
+        <p class="section-desc">From corporate roast dinners and product launches to live podcast tapings and milestone birthday celebrations.</p>
+      </div>
+
+      <div class="grid-3">
+        <!-- Event 1: Full Showroom Buyout -->
+        <div class="tier-card">
+          <div class="tier-card-media">
+            <img src="assets/images/rentals/rental_showroom.jpg" alt="Full Showroom Theater Buyout">
+            <div class="tier-card-badge">
+              <span class="badge badge-teal">UP TO 250 GUESTS</span>
+            </div>
+          </div>
+          <div class="tier-card-body">
+            <h3 class="tier-card-title">Full Showroom Buyout</h3>
+            <div class="tier-card-subtitle">Main Theater &amp; Main Stage</div>
+            <p class="tier-card-desc">Complete private takeover of our flagship 250-seat showroom with state-of-the-art intelligent lighting and professional concert audio.</p>
+            <ul class="tier-card-features">
+              <li><i class="fas fa-check-circle"></i> Full stage lighting &amp; audio tech crew</li>
+              <li><i class="fas fa-check-circle"></i> Custom comedian booking &amp; MC host</li>
+              <li><i class="fas fa-check-circle"></i> Full bar &amp; passed gourmet hors d'oeuvres</li>
+            </ul>
+            <div class="tier-card-footer">
+              <a href="rentals.html" class="btn btn-outline btn-sm" style="width: 100%;">
+                <i class="fas fa-calendar-check"></i> Inquire Full Buyout
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2: Green Room Suite -->
+        <div class="tier-card">
+          <div class="tier-card-media">
+            <img src="assets/images/home2/green_room.jpg" alt="Vintage Backstage Green Room Suite">
+            <div class="tier-card-badge">
+              <span class="badge badge-violet">UP TO 35 GUESTS</span>
+            </div>
+          </div>
+          <div class="tier-card-body">
+            <h3 class="tier-card-title">Green Room VIP Suite</h3>
+            <div class="tier-card-subtitle">Backstage Speakeasy Lounge</div>
+            <p class="tier-card-desc">An exclusive private speakeasy lounge tucked behind the main stage with leather vintage seating, private bar, and backstage access.</p>
+            <ul class="tier-card-features">
+              <li><i class="fas fa-check-circle"></i> Dedicated private mixology bartender</li>
+              <li><i class="fas fa-check-circle"></i> Private restroom &amp; coat check</li>
+              <li><i class="fas fa-check-circle"></i> Backstage passes to touring talent</li>
+            </ul>
+            <div class="tier-card-footer">
+              <a href="rentals.html" class="btn btn-outline btn-sm" style="width: 100%;">
+                <i class="fas fa-calendar-check"></i> Book Green Room
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3: Corporate Roasts & Tapings -->
+        <div class="tier-card">
+          <div class="tier-card-media">
+            <img src="assets/images/rentals/rental_party.jpg" alt="Corporate Roasts and Live Broadcast Tapings">
+            <div class="tier-card-badge">
+              <span class="badge badge-coral">CUSTOM PRODUCTION</span>
+            </div>
+          </div>
+          <div class="tier-card-body">
+            <h3 class="tier-card-title">Corporate Roasts &amp; Tapings</h3>
+            <div class="tier-card-subtitle">Custom Tailored Comedy Nights</div>
+            <p class="tier-card-desc">Professional comedians crafting hilarious, custom-tailored roast scripts for your executive retreat, anniversary, or live podcast taping.</p>
+            <ul class="tier-card-features">
+              <li><i class="fas fa-check-circle"></i> Scripted roast material tailored to your team</li>
+              <li><i class="fas fa-check-circle"></i> Broadcast 4K multi-camera video capture</li>
+              <li><i class="fas fa-check-circle"></i> Custom branded cocktail menu</li>
+            </ul>
+            <div class="tier-card-footer">
+              <a href="rentals.html" class="btn btn-outline btn-sm" style="width: 100%;">
+                <i class="fas fa-calendar-check"></i> Plan Custom Event
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 9: VIP SOCIETY / MARQUEE FINAL CTA (Real Photo Background)
        ========================================================================== -->
   <section class="h2-vip-cta-section" id="laughSocietySection">
     <div class="container">
@@ -481,6 +796,6 @@
   </button>
 
   <!-- Interactive JavaScript Engine -->
-  <script src="assets/js/main.js?v=2.9"></script>
+  <script src="assets/js/main.js?v=3.0"></script>
 </body>
 </html>

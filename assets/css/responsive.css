@@ -54,7 +54,8 @@
     display: none;
   }
 
-  .desktop-only-btn {
+  .desktop-only-btn,
+  .header-book-btn {
     display: none !important;
   }
 
@@ -504,6 +505,25 @@
     flex-shrink: 0;
   }
 
+  .auth-top-controls {
+    top: 1rem !important;
+    right: 1.25rem !important;
+  }
+
+  [dir="rtl"] .auth-top-controls {
+    right: auto !important;
+    left: 1.25rem !important;
+  }
+
+  .auth-form-pane {
+    padding: 3.5rem 1.25rem 2rem 1.25rem !important;
+  }
+
+  .auth-visual-pane {
+    padding: 2rem 1.25rem !important;
+    min-height: 260px !important;
+  }
+
   .hamburger-btn {
     width: 36px;
     height: 36px;
@@ -533,8 +553,10 @@
 
   .shows-grid,
   .comedians-grid,
-  .bento-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .bento-grid,
+  .reviews-grid,
+  .guide-grid {
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
